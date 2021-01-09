@@ -1,0 +1,1 @@
+<div class="banner__item"> <img style="width:144px;height:39px" src="[field:litpic/]" alt="[field:title/]"> </div>

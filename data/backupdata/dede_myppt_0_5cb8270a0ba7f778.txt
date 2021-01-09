@@ -1,0 +1,2 @@
+INSERT INTO `dede_myppt` VALUES('11','2','0','banner1.jpg','','/uploads/200615/1-2006151103333I.png','#');
+INSERT INTO `dede_myppt` VALUES('12','2','0','banner2.jpg','','/uploads/200615/1-200615110410491.png','#');

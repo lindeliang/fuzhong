@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="zh-CN" class="no-js">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,minimum-scale=1.0,user-scalable=0" />
+<title>{dede:global.cfg_webname/}</title>
+<meta name="description" content="{dede:global.cfg_description/}" />
+<meta name="keywords" content="{dede:global.cfg_keywords/}" />
+<link rel='stylesheet' id='wp-block-library-css' href='/skin/css/style.min.css' type='text/css' media='all' />
+<link rel='stylesheet' id='genericons-css' href='/skin/css/genericons.css' type='text/css' media='all' />
+<link rel='stylesheet' id='twentysixteen-style-css' href='/skin/css/style.css' type='text/css' media='all' />
+<link rel='stylesheet' id='swiper-css' href='/skin/css/swiper.min.css' type='text/css' media='all' />
+<!--[if lt IE 9]>
+        <script type='text/javascript' src='/skin/js/html5.js'></script>
+    <![endif]-->
+<script type='text/javascript' src='/skin/js/jquery.js'></script>
+<script type='text/javascript' src='/skin/js/jquery-migrate.min.js'></script>
+<script type='text/javascript' src='/skin/js/homepage.js'></script>
+<script type='text/javascript' src='/skin/js/header.js'> </script>
+<script type='text/javascript' src='/skin/js/swiper.min.js'></script>
+</head>
+<body class="home blog group-blog hfeed">
+<div class="index-page">
+  {dede:include filename="head.htm"/}
+  <div class="homepage">
+    <div class="mian-banner banner-pc">
+      <div class="swiper-container">
+        <div class="swiper-wrapper">
+          {dede:myppt typeid='2'}
+		  <div class="swiper-slide" style="background-image:url('[field:pic/]')">
+            <div class="swiper-slide__container">
+              <h1 class="swiper-slide__container__title"></h1>
+              <h3 class="swiper-slide__container__content"></h3>
+              <div class="btn-group">
+                <button class="btn btn-large btn-immediatelyOpen btn-open-immediately">立即开通</button>
+              </div>
+            </div>
+          </div>
+		  {/dede:myppt}
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </div>
+    <div class="mian-banner banner-wap"> <img style="width: 100%;" src="/skin/images/banner_wap.png" alt="{dede:global.cfg_webname/}">
+      <div class="btn-group">
+        <button class="btn btn-large btn-immediatelyOpen btn-open-immediately">立即开通</button>
+      </div>
+    </div>
+    <div class="online-celebrity" id="shangjia">
+      <div class="block__wrapper" style="background-color:white;">
+        <div class="block">
+          <h2 class="homepage__title celebrity__banner__title"> {dede:field name='typename'/} </h2>
+          <div class="celebrity__banner">
+            
+            <div class="celebrity__banner__texts">
+              <div class="celebrity__banner__text__item">
+                <h3 class="celebrity__banner__text__item__title">{dede:field.title/}</h3>
+                <p class="celebrity__banner__text__item__content"> {dede:field.body/} </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  {dede:include filename="footer.htm"/}
+</div>
+<script type='text/javascript' src='/skin/js/jquery-1.8.3.min.js'></script> 
+<script>
+        $(function(){
+            myScroll();
+        })
+        function myScroll() {
+            window.addEventListener("scroll", function(){
+                var scTop = document.documentElement.scrollTop||document.body.scrollTop;
+                var top = $('#shangjia').get(0).offsetTop;
+                if(scTop >= top){
+                    $('.header').css({'position':'fixed'})
+                }else{
+                    $('.header').css({'position':'absolute'})
+                }
+            });
+            
+    	}
+    </script>
+</body>
+</html>

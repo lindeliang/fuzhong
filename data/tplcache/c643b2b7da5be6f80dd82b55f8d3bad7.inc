@@ -1,0 +1,1 @@
+<div class="swiper-slide"> <img style="width: 400px;height: 390px;" src="[field:litpic/]" alt=""> </div>
