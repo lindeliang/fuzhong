@@ -1,0 +1,252 @@
+{
+    "header": [
+        " *   ",
+        " *   文件描述：本文件为网页资源信息",
+        " *   success字段为下载保存成功的资源;failures字段则为下载保存失败的资源URL",
+        " *   success字段为标准树结构，每一层资源父子关系、URL和保存路径清晰明了",
+        " *   本文件仅为记录检测到的网页资源以便于调试，非专业人员可将本文件删除",
+        " *   详细介绍请参考: https://bazhan.me/faq",
+        " *   "
+    ],
+    "success": [
+        {
+            "url": "https://www.mockuai.com/recruit",
+            "path": "index.html",
+            "children": [
+                {
+                    "url": "http://img.mockuai.com/tms/2019/10/18/upload_0c96cead8fccb51d71a41f9230319361.jpg",
+                    "path": "images/upload_0c96cead8fccb51d71a41f9230319361.jpg"
+                },
+                {
+                    "url": "http://img.mockuai.com/tms/2019/10/15/upload_8dcbba6abfaa1ee0a93b82f0b5725f3b.png",
+                    "path": "images/upload_8dcbba6abfaa1ee0a93b82f0b5725f3b.png"
+                },
+                {
+                    "url": "http://img.mockuai.com/tms/2019/10/15/upload_2c3c3e6aa52bde377e869ef82fd0b83c.png",
+                    "path": "images/upload_2c3c3e6aa52bde377e869ef82fd0b83c.png"
+                },
+                {
+                    "url": "http://img.mockuai.com/tms/2019/10/15/upload_3b44fb7ce2e9210f9df9eb7ea29ad992.png",
+                    "path": "images/upload_3b44fb7ce2e9210f9df9eb7ea29ad992.png"
+                },
+                {
+                    "url": "http://img.mockuai.com/tms/2019/10/15/upload_7c403078e15cec0ae62f7d88b8a866d6.png",
+                    "path": "images/upload_7c403078e15cec0ae62f7d88b8a866d6.png"
+                },
+                {
+                    "url": "http://img.mockuai.com/tms/2019/10/15/upload_508554b0009b0166ade35415822f4fb3.png",
+                    "path": "images/upload_508554b0009b0166ade35415822f4fb3.png"
+                },
+                {
+                    "url": "http://img.mockuai.com/tms/2019/10/15/upload_66b16d15c65d1f8a322e1db40bb8f4ca.png",
+                    "path": "images/upload_66b16d15c65d1f8a322e1db40bb8f4ca.png"
+                },
+                {
+                    "url": "http://img.mockuai.com/tms/2019/10/15/upload_172670c61960005ffbb54672ae219773.png",
+                    "path": "images/upload_172670c61960005ffbb54672ae219773.png"
+                },
+                {
+                    "url": "http://img.mockuai.com/tms/2019/10/15/upload_f13b8ed0a1787ff5dd447bfe60cdfa91.png",
+                    "path": "images/upload_f13b8ed0a1787ff5dd447bfe60cdfa91.png"
+                },
+                {
+                    "url": "http://img.mockuai.com/tms/2019/10/16/upload_ec9faa763f52f3e2e2d907fcdf19a751.png",
+                    "path": "images/upload_ec9faa763f52f3e2e2d907fcdf19a751.png"
+                },
+                {
+                    "url": "http://img.mockuai.com/tms/2019/10/16/upload_1d6928c9a7717b89f4683fb1129ad96c.png",
+                    "path": "images/upload_1d6928c9a7717b89f4683fb1129ad96c.png"
+                },
+                {
+                    "url": "http://img.mockuai.com/tms/2019/10/16/upload_5098c24189d97690323a896d43a4bd0e.png",
+                    "path": "images/upload_5098c24189d97690323a896d43a4bd0e.png"
+                },
+                {
+                    "url": "http://img.mockuai.com/tms/2019/10/16/upload_2c124796b052f8ca6e29d66ed05935f9.png",
+                    "path": "images/upload_2c124796b052f8ca6e29d66ed05935f9.png"
+                },
+                {
+                    "url": "http://img.mockuai.com/tms/2019/10/16/upload_833fe83e35c0b79fcf7865c09647f515.png",
+                    "path": "images/upload_833fe83e35c0b79fcf7865c09647f515.png"
+                },
+                {
+                    "url": "http://img.mockuai.com/tms/2019/10/16/upload_f1a908e16942bacce342faef286d7d34.png",
+                    "path": "images/upload_f1a908e16942bacce342faef286d7d34.png"
+                },
+                {
+                    "url": "https://www.mockuai.com/wp-includes/js/jquery/jquery.js?ver=1.12.4-wp",
+                    "path": "js/jquery.js"
+                },
+                {
+                    "url": "https://www.mockuai.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1",
+                    "path": "js/jquery-migrate.min.js"
+                },
+                {
+                    "url": "https://www.mockuai.com/wp-content/themes/mockuai/js/homepage.js?ver=9.13",
+                    "path": "js/homepage.js"
+                },
+                {
+                    "url": "https://www.mockuai.com/wp-content/themes/mockuai/js/header.js?ver=0.4",
+                    "path": "js/header.js"
+                },
+                {
+                    "url": "https://webapi.amap.com/maps?v=1.4.15&key=95e267d2c6244895003187c0172dd666&ver=5.2.9",
+                    "path": "js/maps.js"
+                },
+                {
+                    "url": "https://www.mockuai.com/wp-content/themes/mockuai/js/swiper.min.js?ver=5.2.9",
+                    "path": "js/swiper.min.js"
+                },
+                {
+                    "url": "https://cdn.mockuai.com/tms/vue.js",
+                    "path": "js/vue.js"
+                },
+                {
+                    "url": "https://cdn.mockuai.com/tms/webcomponents-loader.js",
+                    "path": "js/webcomponents-loader.js"
+                },
+                {
+                    "url": "https://www.mockuai.com/wp-content/themes/mockuai/js/my-common-header.min.js?ver=202011240315",
+                    "path": "js/my-common-header.min.js"
+                },
+                {
+                    "url": "https://www.mockuai.com/wp-content/themes/mockuai/js/recruit.js",
+                    "path": "js/recruit.js"
+                },
+                {
+                    "url": "https://www.mockuai.com/wp-content/themes/mockuai/js/my-common-footer.min.js?ver=202011261015",
+                    "path": "js/my-common-footer.min.js"
+                },
+                {
+                    "url": "https://www.mockuai.com/wp-content/themes/mockuai/js/my-common-sidebar.min.js?ver=202011240315",
+                    "path": "js/my-common-sidebar.min.js"
+                },
+                {
+                    "url": "https://www.mockuai.com/wp-content/themes/mockuai/js/skip-link-focus-fix.js?ver=20160816",
+                    "path": "js/skip-link-focus-fix.js"
+                },
+                {
+                    "url": "https://www.mockuai.com/wp-content/themes/mockuai/js/functions.js?ver=20181230",
+                    "path": "js/functions.js"
+                },
+                {
+                    "url": "https://www.mockuai.com/wp-includes/js/wp-embed.min.js?ver=5.2.9",
+                    "path": "js/wp-embed.min.js"
+                },
+                {
+                    "url": "https://qiyukf.com/script/97a8bb5512338e5d873d15a1148509c1.js",
+                    "path": "js/97a8bb5512338e5d873d15a1148509c1.js"
+                },
+                {
+                    "url": "https://www.mockuai.com/wp-includes/css/dist/block-library/style.min.css?ver=5.2.9",
+                    "path": "css/style.min.css"
+                },
+                {
+                    "url": "https://www.mockuai.com/wp-content/themes/mockuai/genericons/genericons.css?ver=3.4.1",
+                    "path": "css/genericons.css",
+                    "children": [
+                        {
+                            "url": "https://www.mockuai.com/wp-content/themes/mockuai/genericons/Genericons.eot",
+                            "path": "fonts/Genericons.eot"
+                        },
+                        {
+                            "url": "https://www.mockuai.com/wp-content/themes/mockuai/genericons/Genericons.ttf",
+                            "path": "fonts/Genericons.ttf"
+                        },
+                        {
+                            "url": "https://www.mockuai.com/wp-content/themes/mockuai/genericons/Genericons.svg#Genericons",
+                            "path": "images/Genericons.svg"
+                        }
+                    ]
+                },
+                {
+                    "url": "https://www.mockuai.com/wp-content/themes/mockuai/style.css?ver=1.0.40",
+                    "path": "css/style.css",
+                    "children": [
+                        {
+                            "url": "http://img.mockuai.com/tms/2019/8/24/upload_0c552e378f996e23b2cdeb355f0e0f9d.png",
+                            "path": "images/upload_0c552e378f996e23b2cdeb355f0e0f9d.png"
+                        },
+                        {
+                            "url": "http://img.mockuai.com/tms/2019/8/24/upload_2b8a78cf9901be08d52f92f40731991e.png",
+                            "path": "images/upload_2b8a78cf9901be08d52f92f40731991e.png"
+                        },
+                        {
+                            "url": "http://img.mockuai.com/tms/2019/9/16/upload_25598b6f79739e0f6f514c018b075185.jpg",
+                            "path": "images/upload_25598b6f79739e0f6f514c018b075185.jpg"
+                        },
+                        {
+                            "url": "http://img.mockuai.com/tms/2019/9/20/upload_3a636924f1f0047b7eb46d42802c85f4.png",
+                            "path": "images/upload_3a636924f1f0047b7eb46d42802c85f4.png"
+                        },
+                        {
+                            "url": "http://img.mockuai.com/tms/2019/9/23/upload_043bd69af2ca040b2e689c6708d02253.png",
+                            "path": "images/upload_043bd69af2ca040b2e689c6708d02253.png"
+                        },
+                        {
+                            "url": "http://img.mockuai.com/tms/2019/10/15/upload_52eba5bf1658aa996dfa578af488ac7c.png",
+                            "path": "images/upload_52eba5bf1658aa996dfa578af488ac7c.png"
+                        },
+                        {
+                            "url": "http://img.mockuai.com/tms/2019/10/15/upload_2d392304850989cf09e30a596acffae4.png",
+                            "path": "images/upload_2d392304850989cf09e30a596acffae4.png"
+                        },
+                        {
+                            "url": "http://img.mockuai.com/tms/2019/10/15/upload_0231728f62cbdca70189a4b29a9eb477.png",
+                            "path": "images/upload_0231728f62cbdca70189a4b29a9eb477.png"
+                        },
+                        {
+                            "url": "http://img.mockuai.com/tms/2019/10/15/upload_b02164447cbc70df597e9cf0b30f486b.png",
+                            "path": "images/upload_b02164447cbc70df597e9cf0b30f486b.png"
+                        },
+                        {
+                            "url": "http://img.mockuai.com/tms/2020/4/21/upload_60aa15517f7ceafb202ca298eb882f80.png",
+                            "path": "images/upload_60aa15517f7ceafb202ca298eb882f80.png"
+                        },
+                        {
+                            "url": "http://img.mockuai.com/tms/2020/8/16/upload_223e02e99c66db0446f44e08b4bdaf3e.png",
+                            "path": "images/upload_223e02e99c66db0446f44e08b4bdaf3e.png"
+                        },
+                        {
+                            "url": "http://img.mockuai.com/tms/2020/8/16/upload_8c1ede49fa4b94c9c92e837669ac46ed.png",
+                            "path": "images/upload_8c1ede49fa4b94c9c92e837669ac46ed.png"
+                        },
+                        {
+                            "url": "http://img.mockuai.com/tms/2020/8/17/upload_3f309b75363d98fbac0126a668eae505.png",
+                            "path": "images/upload_3f309b75363d98fbac0126a668eae505.png"
+                        },
+                        {
+                            "url": "http://img.mockuai.com/tms/2020/8/17/upload_77a821a3c76a62c9a219b30889a2a830.png",
+                            "path": "images/upload_77a821a3c76a62c9a219b30889a2a830.png"
+                        },
+                        {
+                            "url": "http://img.mockuai.com/tms/2020/4/23/upload_79399983c8b12d1dcb799d9629223125.png",
+                            "path": "images/upload_79399983c8b12d1dcb799d9629223125.png"
+                        },
+                        {
+                            "url": "http://img.mockuai.com/tms/2019/8/26/upload_b10e3e60b7749c5c3498282c8fae8fc3.jpg",
+                            "path": "images/upload_b10e3e60b7749c5c3498282c8fae8fc3.jpg"
+                        },
+                        {
+                            "url": "http://img.mockuai.com/tms/2019/8/26/upload_addda9b1a9e37fb789087cb29312dadd.jpg",
+                            "path": "images/upload_addda9b1a9e37fb789087cb29312dadd.jpg"
+                        }
+                    ]
+                },
+                {
+                    "url": "https://www.mockuai.com/wp-content/themes/mockuai/css/swiper.min.css?ver=5.2.9",
+                    "path": "css/swiper.min.css"
+                },
+                {
+                    "url": "http://img.mockuai.com/tms/2019/8/23/upload_70b31c308444bb5bf90b50dfea3988c1.ico",
+                    "path": "etc/upload_70b31c308444bb5bf90b50dfea3988c1.ico"
+                },
+                {
+                    "url": "https://www.mockuai.com/favicon.ico",
+                    "path": "favicon.ico"
+                }
+            ]
+        }
+    ],
+    "failures": []
+}

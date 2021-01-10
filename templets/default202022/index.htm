@@ -1,288 +1,983 @@
 <!DOCTYPE html>
 <html lang="zh-CN" class="no-js">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,minimum-scale=1.0,user-scalable=0" />
-<title>{dede:global.cfg_webname/}</title>
-<meta name="description" content="{dede:global.cfg_description/}" />
-<meta name="keywords" content="{dede:global.cfg_keywords/}" />
-<link rel='stylesheet' id='wp-block-library-css' href='/skin/css/style.min.css' type='text/css' media='all' />
-<link rel='stylesheet' id='genericons-css' href='/skin/css/genericons.css' type='text/css' media='all' />
-<link rel='stylesheet' id='twentysixteen-style-css' href='/skin/css/style.css' type='text/css' media='all' />
-<link rel='stylesheet' id='swiper-css' href='/skin/css/swiper.min.css' type='text/css' media='all' />
-<!--[if lt IE 9]>
-        <script type='text/javascript' src='/skin/js/html5.js'></script>
-    <![endif]-->
-<script type='text/javascript' src='/skin/js/jquery.js'></script>
-<script type='text/javascript' src='/skin/js/jquery-migrate.min.js'></script>
-<script type='text/javascript' src='/skin/js/homepage.js'></script>
-<script type='text/javascript' src='/skin/js/header.js'> </script>
-<script type='text/javascript' src='/skin/js/swiper.min.js'></script>
-</head>
-<body class="home blog group-blog hfeed">
-<div class="index-page">
-  {dede:include filename="head.htm"/}
-  <div class="homepage">
-    <div class="mian-banner banner-pc">
-      <div class="swiper-container">
-        <div class="swiper-wrapper">
-          {dede:myppt typeid='2'}
-		  <div class="swiper-slide" style="background-image:url('[field:pic/]')">
-            <div class="swiper-slide__container">
-              <h1 class="swiper-slide__container__title"></h1>
-              <h3 class="swiper-slide__container__content"></h3>
-              <div class="btn-group">
-                <button class="btn btn-large btn-immediatelyOpen btn-open-immediately">立即开通</button>
-              </div>
-            </div>
-          </div>
-		  {/dede:myppt}
-        </div>
-        <div class="swiper-pagination"></div>
-      </div>
-    </div>
-    <div class="mian-banner banner-wap"> <img style="width: 100%;" src="/skin/images/banner_wap.png" alt="{dede:global.cfg_webname/}">
-      <div class="btn-group">
-        <button class="btn btn-large btn-immediatelyOpen btn-open-immediately">立即开通</button>
-      </div>
-    </div>
-    {dede:channelartlist typeid='1,1'}
-	<div class="online-celebrity" id="shangjia">
-      <div class="block__wrapper" style="background-color:white;">
-        <div class="block">
-          <h2 class="homepage__title celebrity__banner__title"> {dede:field name='description'/} </h2>
-          <div class="celebrity__banner">
-            <div class="celebrity__banner__image">
-              <div class="secondary__swiper-container">
-                <div class="swiper-wrapper">
-                  {dede:arclist typeid='' row='3' titlelen='60' orderby='pubdate'}
-				  <div class="swiper-slide"> <img src="[field:litpic/]" alt=""> </div>
-				  {/dede:arclist}
-                </div>
-                <!-- 如果需要分页器 -->
-                <div class="secondary__swiper-pagination"></div>
-              </div>
-            </div>
-            <div class="celebrity__banner__text">
-              {dede:arclist typeid='' row='3' titlelen='60' orderby='pubdate'}
-			  <div class="celebrity__banner__text__item">
-                <h3 class="celebrity__banner__text__item__title">[field:title/]</h3>
-                <p class="celebrity__banner__text__item__content"> [field:description function="cn_substr(@me,300)"/] </p>
-              </div>
-			  {/dede:arclist}
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-	{/dede:channelartlist}
-    <div class="business" style="margin-bottom: 80px;">
-      {dede:channelartlist typeid='3,3'}
-	  <div class="block__wrapper" style="background-color:white;">
-        <div class="block">
-          <h2 class="homepage__title business__banner__title"> {dede:field name='description'/} </h2>
-          <div class="business__banner">
-            <div class="business__banner__text">
-              {dede:arclist typeid='' row='4' titlelen='60' orderby='pubdate'}
-			  <div class="business__banner__text__item[field:global runphp='yes' name=autoindex]
-                      $a="";
-                        $b=" business__banner__text__item--active";
-                        if ((@me%1)==0 && @me!=1)  @me=$a;
-                        else  @me=$b;
-                        [/field:global]">
-                <h3 class="business__banner__text__item__title"> [field:title/] </h3>
-                <p class="business__banner__text__item__content"> [field:description function="cn_substr(@me,300)"/]</p>
-              </div>
-			  {/dede:arclist}
-            </div>
-            <div class="business__banner__image" style="margin-top: 80px;">
-              <div class="business__swiper-container">
-                <div class="swiper-wrapper">
-                  {dede:arclist typeid='' row='4' titlelen='60' orderby='pubdate'}
-				  <div class="swiper-slide"> <img style="width: 400px;height: 390px;" src="[field:litpic/]" alt=""> </div>
-				  {/dede:arclist}
-                </div>
-                <!-- 如果需要分页器 -->
-                <div class="business__swiper-pagination"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-	  {/dede:channelartlist}
-      <div class="block__wrapper" id="anlifx">
-        <div class="block">
-          <h3 class="homepage__secondary__title good__list__title"> <span>{dede:type typeid='4'}[field:description /]{/dede:type}</span> </h3>
-          <div class="good__list">
-            {dede:channelartlist typeid='4'}
-			<div class="good__wrapper">
-              <div class="good">
-                <div class="good__icon"> <img style="width:30px;" src="/skin/images/s{dede:global.itemindex/}_icon.png" alt="" class="good__icon"> </div>
-                <h5 class="good__title">{dede:field name='typename'/}</h5>
-                <div class="good__image"> <img src="/skin/images/s{dede:global.itemindex/}.png"
-                                            alt=""> </div>
-                <div class="good__mask">
-                  <h5 class="good__mask__title">{dede:field name='typename'/}</h5>
-                  {dede:arclist typeid='' row='2' titlelen='60' orderby='pubdate'}
-				  <div class="good__mask__item">
-                    <div class="good__mask__item__image"> <img src="[field:litpic/]" alt="" class="good__mask__item__image"> </div>
-                    <h6 class="good__mask__item__title"> [field:title/] </h6>
-                    <p class="good__mask__item__content"> [field:shorttitle/] </p>
-                  </div>
-				  {/dede:arclist}
-                </div>
-              </div>
-            </div>
-			{/dede:channelartlist}
-          </div>
-          <div class="button__wrapper">
-            <button class="btn btn-large btn-primary btn-in-supplier"> <img style="width:28px;" class="btn-icon" src="/skin/images/icon_ruzhu.png" alt=""> <span>商家入驻</span> </button>
-          </div>
-        </div>
-      </div>
-      {dede:channelartlist typeid='5,5'}
-	  <div class="supplier">
-        <div class="block__wrapper" style="background-color:white;">
-          <div class="block">
-            <div class="banner__list">
-              <div class="banner__title">
-                <h3>{dede:field name='typename'/}</h3>
-              </div>
-              <div class="banner__context">
-                {dede:arclist typeid='' limit='0,6' titlelen='60' orderby='pubdate'}
-				<div class="banner__item"> <img style="width:144px;height:39px" src="[field:litpic/]" alt="[field:title/]"> </div>
-				{/dede:arclist}
-              </div>
-              <div class="banner__context">
-                {dede:arclist typeid='' limit='6,6' titlelen='60' orderby='pubdate'}
-				<div class="banner__item"> <img style="width:144px;height:39px" src="[field:litpic/]" alt="[field:title/]"> </div>
-				{/dede:arclist}
-              </div>
-              <div class="banner__context">
-                {dede:arclist typeid='' limit='12,6' titlelen='60' orderby='pubdate'}
-				<div class="banner__item"> <img style="width:144px;height:39px" src="[field:litpic/]" alt="[field:title/]"> </div>
-				{/dede:arclist}
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-	  {/dede:channelartlist}
-    </div>
-    <div class="online-celebrity" id="wanghong">
-      {dede:channelartlist typeid='2,2'}
-	  <div class="block__wrapper" style="background-color:white;">
-        <div class="block">
-          <h2 class="homepage__title celebrity__banner__title"> {dede:field name='description'/} </h2>
-          <div class="celebrity__banner">
-            <div class="celebrity__banner__image">
-              <div class="secondary__swiper-container">
-                <div class="swiper-wrapper">
-                  {dede:arclist typeid='' row='3' titlelen='60' orderby='pubdate'}
-				  <div class="swiper-slide"> <img src="[field:litpic/]" alt=""> </div>
-				  {/dede:arclist}
-                </div>
-                <!-- 如果需要分页器 -->
-                <div class="secondary__swiper-pagination"></div>
-              </div>
-            </div>
-            <div class="celebrity__banner__text">
-              {dede:arclist typeid='' row='3' titlelen='60' orderby='pubdate'}
-			  <div class="celebrity__banner__text__item">
-                <h3 class="celebrity__banner__text__item__title">[field:title/]</h3>
-                <p class="celebrity__banner__text__item__content"> [field:description function="cn_substr(@me,300)"/] </p>
-              </div>
-			  {/dede:arclist}
-            </div>
-          </div>
-        </div>
-      </div>
-	  {/dede:channelartlist}
-      <div class="block__wrapper">
-        <div class="block">
-          {dede:channelartlist typeid='6,6'}
-		  <h3 class="homepage__secondary__title system__list__title"> <span>{dede:field name='description'/}</span> </h3>
-          <div class="system__list">
-            {dede:arclist typeid='' row='6' titlelen='60' orderby='pubdate'}
-			<div class="system__wrapper">
-              <div class="system">
-                <div style="background-image: url('/skin/images/wh_tx[field:global.autoindex/].png');"
-                                        class="image"> <img style="width:46px" src="/skin/images/wh_tx[field:global.autoindex/]_icon.png" alt=""> </div>
-                <h5 class="system__title">[field:title/]</h5>
-                <div class="system__mask">
-                  <h6 class="system__mask__title"> [field:title/] </h6>
-                  <p class="system__mask__cotnent"> [field:description function="cn_substr(@me,300)"/] </p>
-                  <a href="javascript:;" target="blank">
-                  <p class="system__mask__link"> 了解更多 </p>
-                  </a>
-                  <button class="btn btn-primary system__mask__button btn-open-immediately"> 立即开通 </button>
-                </div>
-              </div>
-            </div>
-			{/dede:arclist}
-          </div>
-		  {/dede:channelartlist}
-          {dede:channelartlist typeid='19,19'}
-		  <h3 class="homepage__secondary__title portrait__list__title"> <span>{dede:field name='typename'/}</span> </h3>
-          <div class="portrait__list">
-            <div class="portrait__row">
-              {dede:arclist typeid='' limit='0,5' titlelen='60' orderby='pubdate'}
-			  <div class="portrait">
-                <div class="img"> <img src="[field:litpic/]"> </div>
-                <h6 class="portrait__title">[field:title/]</h6>
-                <p class="portrait__mark">粉丝量：[field:shorttitle/]</p>
-              </div>
-			  {/dede:arclist}
-            </div>
-            <div class="portrait__row">
-              {dede:arclist typeid='' limit='5,5' titlelen='60' orderby='pubdate'}
-			  <div class="portrait">
-                <div class="img"> <img src="[field:litpic/]"> </div>
-                <h6 class="portrait__title">[field:title/]</h6>
-                <p class="portrait__mark">粉丝量：[field:shorttitle/]</p>
-              </div>
-			  {/dede:arclist}
-            </div>
-          </div>
-		  {/dede:channelartlist}
-          <div class="button__wrapper">
-            <button class="btn btn-large btn-open-immediately"> <img style="width:28px;" class="btn-icon" src="/skin/images/icon_kaitong.png" alt=""> <span>立即开通</span> </button>
-            <button class="btn btn-large btn-download-product"> <img style="width:25px;" class="btn-icon" src="/skin/images/icon_xiazai.png" alt=""> <span>立即入驻</span> </button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="homepage__mask">
-    <div id="image-open-immediately" class="image__wrapper"> <img src="/skin/images/weixin.jpg" alt="">
-      <h5 class="image__title">微信扫码 立即开通</h5>
-    </div>
-    <div id="image-in-supplier" class="image__wrapper"> <img src="/skin/images/qr_gr.jpg" alt="">
-      <h5 class="image__title">微信扫码 立即入驻</h5>
-    </div>
-    <div id="image-download-product" class="image__wrapper"> <img src="/skin/images/qr_gr.jpg" alt="">
-      <h5 class="image__title">微信扫码 立即入驻</h5>
-    </div>
-  </div>
-  {dede:include filename="footer.htm"/}
-  </div>
-<script type='text/javascript' src='/skin/js/jquery-1.8.3.min.js'></script> 
-<script>
-        $(function(){
-            myScroll();
-        })
-        function myScroll() {
-            window.addEventListener("scroll", function(){
-                var scTop = document.documentElement.scrollTop||document.body.scrollTop;
-                var top = $('#shangjia').get(0).offsetTop;
-                if(scTop >= top){
-                    $('.header').css({'position':'fixed'})
-                }else{
-                    $('.header').css({'position':'absolute'})
-                }
-            });
-            
-    	}
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=1200">
+
+	<meta name="”Keywords”" Content="短视频购物,电商直播,快手短视频购物,网红电商,快手直播电商,快手带货,快手小黄车">
+	<meta name="”Description”" Content="魔筷星选是直连快手小黄车从事短视频购物与直播电商的领导者,全国领先的网红电商服务平台,服务与网红与供应商群体,并为消费者带来优质的社交购物体验,做短视频购物,电商直播魔筷星选是您优质的选择">
+
+	<link rel="shortcut icon" type="image/ico" href="favicon.ico">
+	
+	<script>(function(html){html.className = html.className.replace(/\bno-js\b/,'js')})(document.documentElement);</script>
+    <title>矩阵直播带货 &#8211; 网红电商_直播电商_快手带货</title>
+    <!-- <link rel="dns-prefetch" href="//webapi.amap.com"> -->
+    <link rel="stylesheet" id="wp-block-library-css" href="/skin/css/style.min.css" type="text/css" media="all">
+    <link rel="stylesheet" id="genericons-css" href="/skin/css/genericons.css" type="text/css" media="all">
+    <link rel="stylesheet" id="twentysixteen-style-css" href="/skin/css/style.css" type="text/css" media="all">
+    <link rel="stylesheet" id="swiper-css" href="/skin/css/swiper.min.css" type="text/css" media="all">
+    <!--[if lt IE 9]>
+    <script type='text/javascript' src='https://www.mockuai.com/wp-content/themes/mockuai/js/html5.js?ver=3.7.4'></script>
+    <[endif]-->
+    <script type="text/javascript" src="/skin/js/jquery.js"></script>
+    <script type="text/javascript" src="/skin/js/jquery-migrate.min.js"></script>
+    <script type="text/javascript" src="/skin/js/homepage.js"></script>
+    <script type="text/javascript" src="/skin/js/header.js"></script>
+    <script type="text/javascript" src="/skin/js/maps.js"></script>
+    <script type="text/javascript" src="/skin/js/swiper.min.js"></script>
+
+        <script type="text/javascript">
+        var cnzz_protocol = (("https:" == document.location.protocol) ? "https://" : "http://");
+        document.write(unescape("%3Cspan id='cnzz_stat_icon_1277985756'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s9.cnzz.com/z_stat.php%3Fid%3D1277985756%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));
     </script>
+</head>
+
+<body class="home blog group-blog hfeed">
+		<div class="index-page">
+	<script src="/skin/js/vue.js"></script>
+<!--Load the web component polyfill-->
+<script src="/skin/js/webcomponents-loader.js"></script>
+<script src="/skin/js/my-common-header.min.js"></script>
+<my-common-header></my-common-header>
+<div class="homepage">
+	<div class="mian-banner">
+		<div class="swiper-container">
+			<div class="swiper-wrapper">
+				<!-- <div class="swiper-slide" style="background-image:url('http://img.mockuai.com/tms/2020/9/7/upload_d0241f5151883228174b2878bcb1109b.png')">
+					<div class="swiper-slide__container">
+						<h1 class="swiper-slide__container__title" style="font-size:50px">魔筷科技百城巡讲进行时</h1>
+						<h3 class="swiper-slide__container__content" style="font-size:30px">助力各地商家顺利布局直播电商</h3>
+						<div class="btn-group">
+							<a  href="https://www.mockuai.com/1201.html" class="btn btn-large btn-immediatelyOpen btn-view-page" style="margin-right:43px;color:#c93c0a;font-size:18px">了解详情></a>
+							<a  href="https://jinshuju.net/f/m2e5kQ" class="btn btn-large active_sign_up_btn ">郑州站活动报名</a>
+						</div>
+					</div>
+				</div> -->
+				<div class="swiper-slide" style="background-image:url(&#x27;/skin/images/upload_d47778ab8fd2fc746f186a17d9b0e6d9.jpg&#x27;)">
+					<div class="swiper-slide__container">
+						<h1 class="swiper-slide__container__title">矩阵直播带货电商平台</h1>
+						<h3 class="swiper-slide__container__content">全国领先的网红电商服务平台</h3>
+						<div class="btn-group">
+							<button class="btn btn-large btn-immediatelyOpen btn-open-immediately" style="margin-right:43px">立即开通</button>
+							<button class="btn btn-large btn-immediatelyOpen btn-download-product">下载APP</button>
+						</div>
+					</div>
+				</div>
+				<div class="swiper-slide" style="background-image:url(&#x27;/skin/images/upload_a049c13ba0ace13bc409e2f5fb5af697.jpg&#x27;)">
+					<div class="swiper-slide__container">
+						<h1 class="swiper-slide__container__title">专为网红定制的手机开店助手</h1>
+						<h3 class="swiper-slide__container__content">简单易用 | 海量货源 | 优质高佣</h3>
+						<button class="btn btn-large btn-immediatelyOpen btn-download-product">下载APP>></button>
+					</div>
+				</div>
+				<div class="swiper-slide" style="background-image:url(&#x27;/skin/images/16024715398319004.jpeg&#x27;)">
+					<div class="swiper-slide__container">
+						<h1 class="swiper-slide__container__title">矩阵直播带货代理商全国火热招募中</h1>
+						<h3 class="swiper-slide__container__content">与您共同掘金千亿直播电商市场</h3>
+						<button class="btn btn-large link-agents" onclick="location.href='/agents'">立即加盟 >></button>
+					</div>
+				</div>
+			</div>
+			<!-- 如果需要分页器 -->
+			<div class="swiper-pagination"></div>
+		</div>
+	</div>
+	<div class="videobox">
+    <div class="videoinner">
+        <div class="close">
+            <img src="/skin/images/upload_33238526ec36550dce59fa881f754f80.png" alt>
+        </div>
+        <video src="https://mktv-in.oss-cn-hangzhou.aliyuncs.com/15822576438564265.mp4" controls="controls" id="indexVideo"></video>
+    </div>
+</div>	<div class="online-celebrity">
+    <div class="block__wrapper" style="background-color:white;">
+        <div class="block">
+            <h2 class="homepage__title celebrity__banner__title">
+                为网红打造一站式无忧卖货体验
+            </h2>
+            <div class="celebrity__banner">
+                <div class="celebrity__banner__image">
+                    <div class="secondary__swiper-container">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <img src="/skin/images/upload_51e6ef5d4a43c3f234b33824938de2fe.png" alt>
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="/skin/images/upload_73343d065d10931eaf6b8dd4307200ea.png" alt>
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="/skin/images/upload_c9445f6f9d808d15f8df177231aa032d.png" alt>
+                            </div>
+                        </div>
+                        <!-- 如果需要分页器 -->
+                        <div class="secondary__swiper-pagination"></div>
+                    </div>
+                </div>
+                <div class="celebrity__banner__text">
+                    <div class="celebrity__banner__text__item">
+                        <h3 class="celebrity__banner__text__item__title">快手直连、简洁易用的开店工具</h3>
+                        <p class="celebrity__banner__text__item__content">魔筷星选APP+小程序，实现手机端店铺管理、商品管理、订单管理、用户沟通</p>
+                    </div>
+                    <div class="celebrity__banner__text__item">
+                        <h3 class="celebrity__banner__text__item__title">优质充足、高性价比的货品资源</h3>
+                        <p class="celebrity__banner__text__item__content">精选10万+SKU，包含食品、美妆、生活百货、服饰配件等众多热门类目</p>
+                    </div>
+                    <div class="celebrity__banner__text__item">
+                        <h3 class="celebrity__banner__text__item__title">贴心全面、实时响应的服务体系</h3>
+                        <p class="celebrity__banner__text__item__content">魔筷学堂、1v1网红导师、专属客服等服务模块，集干货分享、私人培训、需求响应为一体</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="block__wrapper">
+        <div class="block">
+            <h3 class="homepage__secondary__title system__list__title">
+                <span>全方位的网红服务体系</span>
+            </h3>
+            <div class="system__list">
+                <div class="system__wrapper">
+                    <div class="system">
+                        <div style="background-image: url(&#x27;/skin/images/upload_ca620f0e7d2c366214affead30103f14.png&#x27;);" class="image">
+                            <img style="width:46px" src="/skin/images/upload_6772766ddcc7e03f3b14350895d6e774.png" alt>
+                        </div>
+                        <h5 class="system__title">运营指导</h5>
+                        <div class="system__mask">
+                            <h6 class="system__mask__title">
+                                运营指导
+                            </h6>
+                            <p class="system__mask__cotnent">
+                                针对有运营需求的快手网红，可提供全面的实用运营经验和技巧。
+                            </p>
+                            <a href="a/celebrity/index.html" target="blank">
+                                <p class="system__mask__link">
+                                    了解更多
+                                </p>
+                            </a>
+                            <button class="btn btn-primary system__mask__button btn-open-immediately">
+                                立即开通
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="system__wrapper">
+                    <div class="system">
+                        <div style="background-image: url(&#x27;/skin/images/upload_444029f91103ec44865538989b6c92ff.png&#x27;);" class="image">
+                            <img style="width:38px" src="/skin/images/upload_a1be5d6bfc1100ef3c2d22b817ce3030.png" alt>
+                        </div>
+                        <h5 class="system__title">内容策划</h5>
+                        <div class="system__mask">
+                            <h6 class="system__mask__title">
+                                内容策划
+                            </h6>
+                            <p class="system__mask__cotnent">
+                                帮助生产优质内容，对人设、封面、文案以及视频内容进行全方位优化。
+                            </p>
+                            <a href="a/celebrity/index.html" target="blank">
+                                <p class="system__mask__link">
+                                    了解更多
+                                </p>
+                            </a>
+                            <button class="btn btn-primary system__mask__button btn-open-immediately">
+                                立即开通
+                            </button>
+                            <p></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="system__wrapper">
+                    <div class="system">
+                        <div style="background-image: url(&#x27;/skin/images/upload_ce0ae25e3627414a9b270c1dbb3cfdb3.png&#x27;);" class="image">
+                            <img style="width:45px" src="/skin/images/upload_7c2c958835f4beb00c471b441a2465ad.png" alt>
+                        </div>
+                        <h5 class="system__title">电商培训</h5>
+                        <div class="system__mask">
+                            <h6 class="system__mask__title">
+                                电商培训
+                            </h6>
+                            <p class="system__mask__cotnent">
+                                提供选品指导、产品推广、售卖技巧、粉丝运营等电商知识培训。
+                            </p>
+                            <a href="a/celebrity/index.html" target="blank">
+                                <p class="system__mask__link">
+                                    了解更多
+                                </p>
+                            </a>
+                            <button class="btn btn-primary system__mask__button btn-open-immediately">
+                                立即开通
+                            </button>
+                            <p></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="system__wrapper">
+                    <div class="system">
+                        <div style="background-image: url(&#x27;/skin/images/upload_3c1f4d3b269fd7db65d85e75c4a0d25f.png&#x27;);" class="image">
+                            <img style="width:40px" src="/skin/images/upload_22ed2562c041b42535433f0610320896.png" alt>
+                        </div>
+                        <h5 class="system__title">货品对接</h5>
+                        <div class="system__mask">
+                            <h6 class="system__mask__title">
+                                货品对接
+                            </h6>
+                            <p class="system__mask__cotnent">
+                                针对卖魔筷产品的网红，魔筷工作人员将全程负责与供应商、物流商的货品对接工作。
+                            </p>
+                            <a href="a/celebrity/index.html" target="blank">
+                                <p class="system__mask__link">
+                                    了解更多
+                                </p>
+                            </a>
+                            <button class="btn btn-primary system__mask__button btn-open-immediately">
+                                立即开通
+                            </button>
+                            <p></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="system__wrapper">
+                    <div class="system">
+                        <div style="background-image: url(&#x27;/skin/images/upload_0f9b1323cfe8954c56ae8ce17a74e077.png&#x27;);" class="image">
+                            <img style="width:50px" src="/skin/images/upload_50a4489dddfaa033b081516028ca2dc1.png" alt>
+                        </div>
+                        <h5 class="system__title">专属客服</h5>
+                        <div class="system__mask">
+                            <h6 class="system__mask__title">
+                                专属客服
+                            </h6>
+                            <p class="system__mask__cotnent">
+                                针对卖魔筷产品的网红，平台上的所有咨询问题均有魔筷客服参与回复，客服时间：周一到周日 9:00 ~ 02:00。
+                            </p>
+                            <p class="system__mask__link">
+                                了解更多
+                            </p>
+                            <button class="btn btn-primary system__mask__button btn-open-immediately">
+                                立即开通
+                            </button>
+                            <p></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <h3 class="homepage__secondary__title portrait__list__title">
+                <span>这些网红都在用</span>
+            </h3>
+            <div class="portrait__list">
+                <div class="portrait__row">
+                    <div class="portrait">
+                        <img src="/skin/images/upload_0a5a0686b7cd2c57b79ff6b2db8781b0.png">
+                        <h6 class="portrait__title">上官带刀</h6>
+                        <p class="portrait__mark">粉丝量：2628.9w</p>
+                        <!-- <div class="portrait__mask">
+                            <h6 class="portrait__mask__title">
+                                窝头~铲屎官~宠物世界
+                            </h6>
+                            <p class="portrait__mask__content">
+                                此前粉丝6138人
+                                经导师指点，目前粉丝3.2w，获粉成本0.42元/人，在宠物用品行业获粉成本较低
+                            </p>
+                        </div> -->
+                    </div>
+                    <div class="portrait">
+                        <img src="/skin/images/upload_5d2c7c3579a21194bd3b5b594eeae56f.png">
+                        <h6 class="portrait__title">阿浩727加油</h6>
+                        <!-- <h6 class="portrait__title">九公子天诺</h6> -->
+                        <p class="portrait__mark">粉丝量 1639.2w</p>
+                        <!-- <div class="portrait__mask">
+                            <h6 class="portrait__mask__title">
+                                九公子天诺
+                            </h6>
+                            <p class="portrait__mask__content">
+                                原先粉丝906人
+                                经导师指点，一周粉丝数增至8300+个，均为精准粉，日销售额5000元
+                            </p>
+                        </div> -->
+                    </div>
+                    <div class="portrait">
+                        <img src="/skin/images/upload_2129961beb47373fecde377bdbeb229d.png">
+                        <h6 class="portrait__title">芭比迪丽拉
+                        </h6>
+                        <p class="portrait__mark">粉丝量：1317.5w</p>
+                        <!-- <div class="portrait__mask">
+                            <h6 class="portrait__mask__title">
+                                顺丰飞哥（努力中）
+                            </h6>
+                            <p class="portrait__mask__content">
+                                0基础新号
+                                经导师指点，15天运营至1w人，获粉成本0.25元/个，目前粉丝3.3w
+                            </p>
+                        </div> -->
+                    </div>
+                    <div class="portrait">
+                        <img src="/skin/images/upload_16ac3c4ac599283380947d3524cf0343.png">
+                        <h6 class="portrait__title">王逗逗</h6>
+                        <p class="portrait__mark">粉丝量 1265.2w</p>
+                        <!-- <div class="portrait__mask">
+                            <h6 class="portrait__mask__title">
+                                亮哥火锅工厂
+                            </h6>
+                            <p class="portrait__mask__content">
+                                3月份零基础号
+                                经导师指点，现获粉成本控制在0.18元/个，目前粉丝2.4w
+                            </p>
+                        </div> -->
+                    </div>
+                    <div class="portrait">
+                        <img src="/skin/images/upload_b90644f9f772641080ba00f01bbe82c6.png">
+                        <h6 class="portrait__title">陶大帅</h6>
+                        <p class="portrait__mark">粉丝量：1280.1w</p>
+                        <!-- <div class="portrait__mask">
+                            <h6 class="portrait__mask__title">
+                                林叔国际范儿女鞋
+                            </h6>
+                            <p class="portrait__mask__content">
+                                此前粉丝3.1w人，风格较为杂乱
+                                经导师指点，作品基本都被官方助推，单作品播放量高达20w+，单天运营7000+人。
+                            </p>
+                        </div> -->
+                    </div>
+                </div>
+                <div class="portrait__row">
+                    <div class="portrait">
+                        <img src="/skin/images/upload_5e0ba16e124718354da3797d7add6e70.png">
+                        <h6 class="portrait__title">贝源哥</h6>
+                        <p class="portrait__mark">粉丝量：1125w</p>
+                        <!-- <div class="portrait__mask">
+                            <h6 class="portrait__mask__title">
+                                嗨吃·李小贝
+                            </h6>
+                            <p class="portrait__mask__content">
+                                此前粉丝6153人
+                                经导师指点，现5天运营3400+人，目前粉丝3.8w，获粉成本仅0.14元/人
+                            </p>
+                        </div> -->
+                    </div>
+                    <div class="portrait">
+                        <img src="/skin/images/upload_dac65253e9306b4b4c12048a30db75ed.png">
+                        <h6 class="portrait__title">梁笑笑</h6>
+                        <p class="portrait__mark">粉丝量：1051.8w</p>
+                        <!-- <div class="portrait__mask">
+                            <h6 class="portrait__mask__title">
+                                千可一（千玺）
+                            </h6>
+                            <p class="portrait__mask__content">
+                                由于视频内容优质，此前单日运营可过万
+                                经导师指点，一周运营高达10w+个，目前粉丝14.4w
+                            </p>
+                        </div> -->
+                    </div>
+                    <div class="portrait">
+                        <img src="/skin/images/upload_d964d924f3886c62632b6233f6cfa113.png">
+                        <h6 class="portrait__title">胡一点</h6>
+                        <p class="portrait__mark">粉丝量：981.9w</p>
+                        <!-- <div class="portrait__mask">
+                            <h6 class="portrait__mask__title">
+                                玉润人生 文弟
+                            </h6>
+                            <p class="portrait__mask__content">
+                                原来粉丝5.9w人，持续很久不运营
+                                经导师指点，7天运营6000人，其中单作品播放量高达130w+，单作品运营3000人
+                            </p>
+                        </div> -->
+                    </div>
+                    <div class="portrait">
+                        <img src="/skin/images/upload_2caab4478306c6448507a98744aa13ed.png">
+                        <h6 class="portrait__title">大牙妹很ok</h6>
+                        <p class="portrait__mark">粉丝量：436.1w</p>
+                        <!-- <div class="portrait__mask">
+                            <h6 class="portrait__mask__title">
+                                叫我隔壁小哥
+                            </h6>
+                            <p class="portrait__mask__content">
+                                此前粉丝1.1w人
+                                经导师指点，5天运营2000+人，目前粉丝3w人，获粉成本仅2分钱/人
+                            </p>
+                        </div> -->
+                    </div>
+                    <div class="portrait">
+                        <img src="/skin/images/upload_c29422c4cd66a57ce0c5b2da92e6df01.png">
+                        <h6 class="portrait__title">澳洲杨姐</h6>
+                        <p class="portrait__mark">粉丝量：372.7w</p>
+                        <!-- <div class="portrait__mask">
+                            <h6 class="portrait__mask__title">
+                                月饼小哥（传统美食）
+                            </h6>
+                            <p class="portrait__mask__content">
+                                此前运营速度慢
+                                经导师指点，运营3.6w+人，获粉成本仅0.28元/人
+                            </p>
+                        </div> -->
+                    </div>
+                </div>
+                <!-- <div class="portrait__row1">
+                    <div class="portrait">
+                        <img src="http://img.mockuai.com/tms/2019/8/17/upload_5b6cf66fe89b753bbc2610069bd71b2c.png" alt="">
+                        <h6 class="portrait__title">首饰店主</h6>
+                        <h6 class="portrait__title">魅力相伴耳饰</h6>
+                        <p class="portrait__mark">粉丝量：15.2w</p>
+                        <div class="portrait__mask">
+                            <h6 class="portrait__mask__title">
+                                魅力相伴耳饰
+                            </h6>
+                            <p class="portrait__mask__content">
+                                之前，我的快手粉丝数连续两个月都停留在6.9w，也不懂得快手粉条使用规则。但在经过东风导师的耐心指导后，
+                                我学习到了很多实用的快手运营技巧，并一步步改变原来的风格。感谢东风导师让我成功突破运营瓶颈，现在我已经有粉丝15w+，
+                                月销售额增长18w+。
+                            </p>
+                        </div>
+                    </div>
+                    <div class="portrait">
+                        <img src="http://img.mockuai.com/tms/2019/8/17/upload_bda742b7c1e8942f3ddb60e0e2affbe4.png" alt="">
+                        <h6 class="portrait__title">长白山人参土特产</h6>
+                        <h6 class="portrait__title">长白山（刚弟儿）</h6>
+                        <p class="portrait__mark">粉丝量：20.6w</p>
+                        <div class="portrait__mask">
+                            <h6 class="portrait__mask__title">
+                                长白山（刚弟儿）
+                            </h6>
+                            <p class="portrait__mask__content">
+                                我以前不知道该如何拍摄视频，晴天老师帮我想了很多拍摄风格和方案，并且一步步指导我如何在视频中展现自己、介绍产品。
+                                现在，我的单个视频播放量已经突破200w。整体合算后，我的单个粉丝成本只需要0.1元左右，一个月粉丝就突破了20w，
+                                非常感谢晴天老师。
+                            </p>
+                        </div>
+                    </div>
+                    <div class="portrait">
+                        <img src="http://img.mockuai.com/tms/2019/8/17/upload_e466761d903d47b3ebbf00de1bbd6d14.png" alt="">
+                        <h6 class="portrait__title">眼妆博主</h6>
+                        <h6 class="portrait__title">眼艺完美人生</h6>
+                        <p class="portrait__mark">粉丝量：8.4w</p>
+                        <div class="portrait__mask">
+                            <h6 class="portrait__mask__title">
+                                眼艺完美人生
+                            </h6>
+                            <p class="portrait__mask__content">
+                                之前我对自己视频的内容重心没有清晰定位，拍摄风格也不统一。导师看完视频之后给我的建议是：固定只做眼影的视频，
+                                同时跟着眼妆行业的热点策划内容，并且每次要大胆尝试，直到找出适合自己的风格。现在，我已经形成了自己的风格特色，
+                                每月成交额都在1w以上。
+                            </p>
+                        </div>
+                    </div>
+                    <div class="portrait">
+                        <img src="http://img.mockuai.com/tms/2019/8/17/upload_c9a56e08b9d72e3fefffe7dd36d683a9.png" alt="">
+                        <h6 class="portrait__title">新疆干果卖家</h6>
+                        <h6 class="portrait__title">农场主二哥</h6>
+                        <p class="portrait__mark">粉丝量：12w</p>
+                        <div class="portrait__mask">
+                            <h6 class="portrait__mask__title">
+                                新疆干果卖家
+                            </h6>
+                            <p class="portrait__mask__content">
+                                刚开通账号的时候，我的粉丝数就是不见涨，自己也不知道该怎么卖货。后来，东风导师帮我进行了分析：内容表达混乱，
+                                标题没重点，拍摄风格不统一是最大的几个问题，又针对这些问题耐心指导我如何逐个改进。多亏了东风导师，
+                                我才能一个月飞速运营6w+,单周销售额突破5w+。
+                            </p>
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+            <div class="button__wrapper">
+                <button class="btn btn-large btn-open-immediately">
+                    <img style="width:28px;" class="btn-icon" src="/skin/images/upload_49faa6dc6c76c232ba449cdca0b1ee47.png" alt>立即开通
+                </button>
+                <button class="btn btn-large btn-download-product">
+                    <img style="width:25px;" class="btn-icon" src="/skin/images/upload_3dd68f475c96ac9c3d4cf8a644cec389.png" alt>下载APP
+                </button>
+            </div>
+        </div>
+    </div>
+</div>	<div class="business">
+    <div class="block__wrapper" style="background-color:white;">
+        <div class="block">
+            <h2 class="homepage__title business__banner__title">
+                帮助供应商成功布局直播电商
+            </h2>
+            <div class="business__banner">
+                <div class="business__banner__text">
+                    <div class="business__banner__text__item business__banner__text__item--active">
+                        <h3 class="business__banner__text__item__title">系统化管理业务流程
+                            <p class="business__banner__text__item__content">为供应商提供集商品管理、订单管理、客服系统、数据分析等于一体的强大系统工具</p>
+                    </h3></div>
+                    <div class="business__banner__text__item">
+                        <h3 class="business__banner__text__item__title">高效匹配海量网红资源
+                            <p class="business__banner__text__item__content"> 触达海量快手网红资源，实现“货”与“人”的高效匹配</p>
+                    </h3></div>
+                    <div class="business__banner__text__item">
+                        <h3 class="business__banner__text__item__title">打造热门、品效合一
+                            <p class="business__banner__text__item__content">联合网红共同打造热门，帮助供应商实现销售与品牌推广的双重效益</p>
+                    </h3></div>
+                </div>
+                <div class="business__banner__image">
+                    <div class="business__swiper-container">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <img style="width: 400px;height: 390px;" src="/skin/images/upload_5be9417c4b30f0956607e4099e254b68.png" alt>
+                            </div>
+                            <div class="swiper-slide">
+                                <img style="width: 357px;height: 392px;" src="/skin/images/upload_5cfac1b9b7dca6dc396f5861bf71cf39.png" alt>
+                            </div>
+                            <div class="swiper-slide">
+                                <img style="width: 364px;height: 392px;" src="/skin/images/upload_6f42e1b8a0aef6212b0925fd28676e78.png" alt>
+                            </div>
+                        </div>
+                        <!-- 如果需要分页器 -->
+                        <div class="business__swiper-pagination"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="block__wrapper">
+        <div class="block">
+            <h3 class="homepage__secondary__title system__list__title">
+                <span>直播生态下的完整供应商服务体系</span>
+            </h3>
+            <div class="system__list">
+                <div class="system__wrapper">
+                    <div class="system">
+                        <div class="system__image">
+                            <img style="width:58px;" src="/skin/images/upload_9f7ea5af17d2f796fb428e7ad753d4e3.png" alt>
+                        </div>
+                        <div class="system__image system__image--active">
+                            <img style="width:58px;" src="/skin/images/upload_46dd0efe72cdfc0e2ed0187eef4ea839.png" alt>
+                        </div>
+                        <h5 class="system__title">快速入驻</h5>
+                        <p class="system__content">
+                            3天内通过审核，帮助品牌商快速入驻平台
+                        </p>
+                    </div>
+                </div>
+                <div class="system__wrapper">
+                    <div class="system">
+                        <div class="system__image">
+                            <img style="width:54px;" src="/skin/images/upload_f49edf4dcb62efb808426937a4cc615e.png" alt>
+                        </div>
+                        <div class="system__image system__image--active">
+                            <img style="width:54px;" src="/skin/images/upload_3ac9d0e4f44e5019d38b209731e9e4a1.png" alt>
+                        </div>
+                        <h5 class="system__title">快速回款</h5>
+                        <p class="system__content">
+                            快速结算模式可加速资金流转，最短回款周期为7天
+                        </p>
+                    </div>
+                </div>
+                <div class="system__wrapper">
+                    <div class="system">
+                        <div class="system__image">
+                            <img style="width:60px;" src="/skin/images/upload_f5672f56f0b53e8106c346b6929fd224.png" alt>
+                        </div>
+                        <div class="system__image system__image--active">
+                            <img style="width:60px;" src="/skin/images/upload_d1473998391929a87997d2cc3befcca5.png" alt>
+                        </div>
+                        <h5 class="system__title">网红匹配</h5>
+                        <p class="system__content">
+                            根据网红和产品的特点，帮助进行个性化匹配
+                        </p>
+                    </div>
+                </div>
+                <div class="system__wrapper">
+                    <div class="system">
+                        <div class="system__image">
+                            <img style="width:53px;" src="/skin/images/upload_001043ff6ce959f4d1fa0223d2945578.png" alt>
+                        </div>
+                        <div class="system__image system__image--active">
+                            <img style="width:53px;" src="/skin/images/upload_5051446a76976603e198504e3cf1ed9d.png" alt>
+                        </div>
+                        <h5 class="system__title">热门打造</h5>
+                        <p class="system__content">
+                            联合网红共同打造热门，提升品牌曝光与销售转化
+                        </p>
+                    </div>
+                </div>
+                <div class="system__wrapper">
+                    <div class="system">
+                        <div class="system__image">
+                            <img style="width:59px;" src="/skin/images/upload_04e88504f08fbc0677e6065787414b34.png" alt>
+                        </div>
+                        <div class="system__image system__image--active">
+                            <img style="width:59px;" src="/skin/images/upload_86faf14378660db2c9bd852ea5ad224c.png" alt>
+                        </div>
+                        <h5 class="system__title">专属客服</h5>
+                        <p class="system__content">
+                            专业客服团队，解决供应商遇到的各类难题
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <h3 class="homepage__secondary__title good__list__title">
+                <span>现已成功打造出多品类热门</span>
+            </h3>
+            <div class="good__list">
+                <div class="good__wrapper">
+                    <div class="good">
+                        <div class="good__icon">
+                            <img style="width:30px;" src="/skin/images/upload_eaba3e7eb4698bfb4b3d8d42f8804382.png" alt class="good__icon">
+                        </div>
+                        <h5 class="good__title">美妆个护</h5>
+                        <div class="good__image">
+                            <img src="/skin/images/upload_3fdd828bb05ef4fae9be6fee029f1c52.png" alt>
+                        </div>
+                        <div class="good__mask">
+                            <h5 class="good__mask__title">美妆个护</h5>
+                            <div class="good__mask__item">
+                                <div class="good__mask__item__image">
+                                    <img src="/skin/images/upload_a8bb012ca419e6768e33571f5437e3cf.png" alt class="good__mask__item__image">
+                                </div>
+                                <h6 class="good__mask__item__title">
+                                    洗护三件套
+                                </h6>
+                                <p class="good__mask__item__content">
+                                    月均销量1万+
+                                </p>
+                            </div>
+                            <div class="good__mask__item">
+                                <div class="good__mask__item__image">
+                                    <img src="/skin/images/upload_4a811212532833b98add3f56f0ced4b5.png" alt class="good__mask__item__image">
+                                </div>
+                                <h6 class="good__mask__item__title">
+                                    精华眼霜
+                                </h6>
+                                <p class="good__mask__item__content">
+                                    月均销量5万+
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="good__wrapper">
+                    <div class="good">
+                        <div class="good__icon">
+                            <img style="width:30px;" src="/skin/images/upload_31c0489c9f5ee7595faa89ceefd20fff.png" alt>
+                        </div>
+                        <h5 class="good__title">生活百货</h5>
+                        <div class="good__image">
+                            <img src="/skin/images/upload_1c9c0a0037789ec30197300c06b85c3a.png" alt>
+                        </div>
+                        <div class="good__mask">
+                            <h5 class="good__mask__title">生活百货</h5>
+                            <div class="good__mask__item">
+                                <div class="good__mask__item__image">
+                                    <img src="/skin/images/upload_e70bcda27f1741b279b23faab9b0907e.png" alt class="good__mask__item__image">
+                                </div>
+                                <h6 class="good__mask__item__title">
+                                    原生竹浆抽纸
+                                </h6>
+                                <p class="good__mask__item__content">
+                                    月均销量30万+
+                                </p>
+                            </div>
+                            <div class="good__mask__item">
+                                <div class="good__mask__item__image">
+                                    <img src="/skin/images/upload_bb2598bb026fd77389dd6a73f24165f5.png" alt class="good__mask__item__image">
+                                </div>
+                                <h6 class="good__mask__item__title">
+                                    小苏打牙膏
+                                </h6>
+                                <p class="good__mask__item__content">
+                                    月均销量5万+
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="good__wrapper">
+                    <div class="good">
+                        <div class="good__icon">
+                            <img style="width:20px;" src="/skin/images/upload_1432138d8dc8fe0d6ed006bf6d944a44.png" alt class="good__icon">
+                        </div>
+                        <h5 class="good__title">食品饮料</h5>
+                        <div class="good__image">
+                            <img src="/skin/images/upload_38ee968ea02f30f31baffe261f775fda.png" alt>
+                        </div>
+                        <div class="good__mask">
+                            <h5 class="good__mask__title">食品饮料</h5>
+                            <div class="good__mask__item">
+                                <div class="good__mask__item__image">
+                                    <img src="/skin/images/upload_31171bc62289f844887c22aa2ad44587.png" alt class="good__mask__item__image">
+                                </div>
+                                <h6 class="good__mask__item__title">
+                                    红豆薏米茶
+                                </h6>
+                                <p class="good__mask__item__content">
+                                    月均销量5万+
+                                </p>
+                            </div>
+                            <div class="good__mask__item">
+                                <div class="good__mask__item__image">
+                                    <img src="/skin/images/upload_6e8100b6dd83db99532dac141e788c1f.png" alt class="good__mask__item__image">
+                                </div>
+                                <h6 class="good__mask__item__title">
+                                    酸辣粉
+                                </h6>
+                                <p class="good__mask__item__content">
+                                    月均销量10万+
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="good__wrapper">
+                    <div class="good">
+                        <div class="good__icon">
+                            <img style="width:30px;" src="/skin/images/upload_673d868f9ba3b1437cde40dba0a23f74.png" alt class="good__icon">
+                        </div>
+                        <h5 class="good__title">服饰箱包</h5>
+                        <div class="good__image">
+                            <img src="/skin/images/upload_304ee58403b6b1113f1c48cc2085144e.png" alt>
+                        </div>
+                        <div class="good__mask">
+                            <h5 class="good__mask__title">服饰箱包</h5>
+                            <div class="good__mask__item">
+                                <div class="good__mask__item__image">
+                                    <img src="/skin/images/upload_70752bb8e2b2b8db935ac23118119e40.png" alt class="good__mask__item__image">
+                                </div>
+                                <h6 class="good__mask__item__title">
+                                    居家睡衣
+                                </h6>
+                                <p class="good__mask__item__content">
+                                    月均销量5万+
+                                </p>
+                            </div>
+                            <div class="good__mask__item">
+                                <div class="good__mask__item__image">
+                                    <img src="/skin/images/upload_bff69724ace2bb2ff98a598eddbefd9b.png" alt class="good__mask__item__image">
+                                </div>
+                                <h6 class="good__mask__item__title">
+                                    自动皮带扣
+                                </h6>
+                                <p class="good__mask__item__content">
+                                    月均销量3万+
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="button__wrapper">
+                <button class="btn btn-large btn-primary btn-in-supplier">
+                    <img style="width:28px;" class="btn-icon" src="/skin/images/upload_5821c89ad3952f6c4ee8de28df60f277.png" alt>
+                    
+                </button>
+            </div>
+        </div>
+    </div>
+</div>	<div class="busniess block__wrapper">
+		<div class="block">
+			<div class="busniess__title">
+
+			</div>
+			<div class="busniess__text">
+
+			</div>
+			<div class="busniess__image">
+
+			</div>
+		</div>
+	</div>
+	<div class="busniess-system block__wrapper">
+		<div class="block">
+		</div>
+	</div>
+	<div class="faddish-goods block__wrapper">
+		<div class="block">
+		</div>
+	</div>
+	<div class="article-wrapper">
+    <div class="article-main">
+        <h2 class="article__title">公司动态</h2>
+        <div class="article__content">
+            <div class="article-item">
+                <a href="category/yzkb">
+                <div class="article-item-top">
+                    <img src="/skin/images/upload_af1851e1301d524271e119af6a443d74.png" alt class="article-item-top__img">
+                    <span class="article-item-top__txt">一周筷报</span>
+                </div>
+                </a>
+                <ul>
+                                        <a href="https://www.mockuai.com/1356.html"><li class="article-item__li"><span class="article-item__title">独家短视频原创作者被侵权率超90%，抄袭现象严重</span></li></a>
+                                        <a href="https://www.mockuai.com/1342.html"><li class="article-item__li"><span class="article-item__title">2020魔筷网红年度盛典来啦，3w+主播、百万现金&#8230;等你一起狂欢！</span></li></a>
+                                        <a href="https://www.mockuai.com/1320.html"><li class="article-item__li"><span class="article-item__title">快手重拳打击劣质电商，封禁700多个账号｜一周筷报</span></li></a>
+                                        <a href="https://www.mockuai.com/1290.html"><li class="article-item__li"><span class="article-item__title">魔筷的这把火，烧出了快手大 V 阿浩的第一个亿</span></li></a>
+                                        <a href="https://www.mockuai.com/1249.html"><li class="article-item__li"><span class="article-item__title">快手在国家级贫困地区视频总数超29亿条，点赞数超950亿次</span></li></a>
+                                    </ul>
+            </div>
+            <div class="article-item">
+                <a href="category/gszx">
+                <div class="article-item-top">
+                    <img src="/skin/images/upload_5b6e1f65744d4566b24cfd89b9f7f9ca.png" alt class="article-item-top__img">
+                    <span class="article-item-top__txt">公司资讯</span>
+                </div>
+                </a>
+                <ul>
+                                    <a href="https://www.mockuai.com/1377.html"><li class="article-item__li"><span class="article-item__title">“线上+线下”齐发力，魔筷年货盛大启幕，助力构建直播新生态</span></li></a>
+                                        <a href="https://www.mockuai.com/1373.html"><li class="article-item__li"><span class="article-item__title">魔筷科技荣获“2020年度中国创新成长企业100强”</span></li></a>
+                                        <a href="https://www.mockuai.com/1371.html"><li class="article-item__li"><span class="article-item__title">魔筷科技受邀探讨直播电商发展趋势，并荣获“2020好公司·年度创新发展大奖”</span></li></a>
+                                        <a href="https://www.mockuai.com/1367.html"><li class="article-item__li"><span class="article-item__title">三声专访｜魔筷的这一年，也是快手电商的观察切口</span></li></a>
+                                        <a href="https://www.mockuai.com/1361.html"><li class="article-item__li"><span class="article-item__title">我们接入了视频号小商店供应链系统，还看到了这几大新机会！</span></li></a>
+                                    </ul>
+            </div>
+            <div class="article-item">
+                <a href="category/kwkd">
+                <div class="article-item-top">
+                    <img src="/skin/images/upload_b1e3319d775d55e2e8100a3c4446b424.png" alt class="article-item-top__img">
+                    <span class="article-item-top__txt">筷问筷答</span>
+                </div>
+                </a>
+                <ul>
+                                    <a href="https://www.mockuai.com/1079.html"><li class="article-item__li"><span class="article-item__title">快手商户客服违禁词，这些词千万不能用！</span></li></a>
+                                        <a href="https://www.mockuai.com/1067.html"><li class="article-item__li"><span class="article-item__title">快手小店信用分扣分清零了！更重要的还有这3点</span></li></a>
+                                        <a href="https://www.mockuai.com/1065.html"><li class="article-item__li"><span class="article-item__title">为什么我上传商品之后要补缴店铺保证金？</span></li></a>
+                                        <a href="https://www.mockuai.com/1063.html"><li class="article-item__li"><span class="article-item__title">如何避免“虚假宣传”？这些快手直播违禁词你应该知道｜筷问筷答</span></li></a>
+                                        <a href="https://www.mockuai.com/1054.html"><li class="article-item__li"><span class="article-item__title">为什么会出现“商品还在路上，却显示确认收货”的情况？</span></li></a>
+                                    </ul>
+            </div>
+            <div class="article-item">
+                <a href="category/whgs">
+                <div class="article-item-top">
+                    <img src="/skin/images/upload_bab3757573e609d3167db7d234a8c884.png" alt class="article-item-top__img">
+                    <span class="article-item-top__txt">网红故事</span>
+                </div>
+                </a>
+                <ul>
+                                    <a href="https://www.mockuai.com/1323.html"><li class="article-item__li"><span class="article-item__title">看最美的云海，毕业了做你的媳妇！视频播放量2970.0万</span></li></a>
+                                        <a href="https://www.mockuai.com/775.html"><li class="article-item__li"><span class="article-item__title">盘点2019：这些快手网红事件，你错过了几个？</span></li></a>
+                                        <a href="https://www.mockuai.com/766.html"><li class="article-item__li"><span class="article-item__title">辛巴“千万级别”的快手号是怎么做「账号装修」的？</span></li></a>
+                                        <a href="https://www.mockuai.com/714.html"><li class="article-item__li"><span class="article-item__title">不会做人设定位？快手新人必知的人设套路送上！</span></li></a>
+                                        <a href="https://www.mockuai.com/690.html"><li class="article-item__li"><span class="article-item__title">一个月提升粉丝127万，仅次于辛巴，为什么汽车类视频越来越吃香？</span></li></a>
+                                    </ul>
+            </div>
+        </div>
+    </div>
+</div></div>
+
+<div class="homepage__mask">
+	<div id="image-open-immediately" class="image__wrapper">
+		<img src="/skin/images/upload_6a48ea3fa6907c0c493bae2b02cd9527.png" alt>
+		<h5 class="image__title">微信扫码 立即开通</h5>
+	</div>
+	<div id="image-in-supplier" class="image__wrapper">
+		<img src="/skin/images/upload_a0a9bdc1a1002e3ebf989ed4b07e60ae.png" alt>
+		<h5 class="image__title">微信扫码 立即入驻</h5>
+	</div>
+	<div id="image-download-product" class="image__wrapper">
+		<img src="/skin/images/upload_02b3b8fc7753c25e8b600af3b72fa68e.png" alt>
+		<h5 class="image__title">微信扫码 下载产品</h5>
+	</div>
+</div>
+
+
+<script src="/skin/js/vue.js"></script>
+<!--Load the web component polyfill-->
+<script src="/skin/js/webcomponents-loader.js"></script>
+<script src="/skin/js/my-common-footer.min.js"></script>
+<script src="/skin/js/my-common-sidebar.min.js"></script>
+<my-common-footer></my-common-footer>
+<my-common-sidebar></my-common-sidebar>
+<!-- <footer>
+    <div class="block">
+        <div class="footer__about">
+            <h5 class="footer__about__title">关于魔筷</h5>
+            <p class="footer__about__content__item">
+                <a href="/about" target="blank">公司介绍</a>
+            </p>
+            <p class="footer__about__content__item">
+                <a href="/recruit" target="blank">
+                    加入魔筷
+                </a>
+            </p>
+            <p class="footer__about__content__item">
+                <a href="/article-list" target="blank">资讯中心</a>
+            </p>
+        </div>
+        <div class="footer__partner_wrapper">
+            <div class="footer__partner">
+                <h6 class="footer__partner__title">
+                    战略合作伙伴：
+                </h6>
+                <div class="footer__partner__content">
+                    <img style="width:67px;" src="http://img.mockuai.com/tms/2019/8/19/upload_c2c7a8c1b0a10cb4dd70838f27aa1613.png" alt="">
+                    <img style="width:56px;" src="http://img.mockuai.com/tms/2019/8/19/upload_30090d08d0239db0fd95800c8b732607.png" alt="">
+                </div>
+            </div>
+            <div class="cooperation_email_wrapper">
+                <h6 class="footer__partner__title">
+                 官方合作邮箱：
+                </h6>
+                <p>MKBusiness@mockuai.com</p>
+            </div>
+        </div>
+        <div class="footer__certification">
+            <h6 class="footer__certification__title">
+                快手官方认证：
+            </h6>
+            <p class="footer__certification__content__item">
+                快手燎原计划官方服务商
+            </p>
+            <p class="footer__certification__content__item">
+                快手优秀服务商
+            </p>
+            <p class="footer__certification__content__item">
+                快手电商内容服务商
+            </p>
+        </div>
+        <div class="footer__line">
+            <h6 class="footer__line__title">客服热线：</h6>
+            <p class="footer__line__content__item">开店咨询：400-900-1231</p>
+            <p class="footer__line__content__item">售后专线：0571-85225588</p>
+            <p class="footer__line__content__item">周一至周日9:00—21:00</p>
+        </div>
+        <div class="footer__QRcode">
+            <div class="code__wrapper">
+                <img src="http://img.mockuai.com/tms/2019/8/19/upload_983be0799dfea5b863e7351b91154c40.png" alt="">
+                <p>
+                    关注魔筷星选
+                </p>
+            </div>
+            <div class="code__wrapper">
+                <img src="http://img.mockuai.com/tms/2019/8/21/upload_02b3b8fc7753c25e8b600af3b72fa68e.png" alt="">
+                <p>
+                    下载魔筷星选
+                </p>
+            </div>
+        </div>
+        <div class="footer__bottom">
+            <p>
+                ©2015-2020 Mockuai.com 杭州魔筷科技有限公司
+            </p>
+            <p>
+                <a href="https://www.mockuai.com/890.html" target="_blank" style="color: #FFF">隐私权政策</a>
+            </p>
+            <p>
+            浙江省网络食品销售第三方平台提供者备案：浙网食A33010015 <a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=33010602004760" target="_blank" style="color: #FFF"><img class="footer__bottom__icon" src="http://img.mockuai.com/tms/2019/8/19/upload_2fa9a2f9270a9057d46c3b3e96c17088.png" alt="">浙ICP备15018042号-1</a>
+            </p>
+        </div>
+    </div>
+</footer> -->
+<!-- <div class="float-window" onclick="openKefu()">
+	<img src="https://img.mockuai.com/tms/2020/6/9/upload_ca22b2ff634e8fc53d0056a7dc619162.png" alt="">
+	<img style="position: absolute;
+    left: 10px;
+    bottom: 41px;
+    width: 96px;
+    height: 96px;
+}" src="https://mktv-in-cdn.mockuai.com/16000774005029618.png" alt="">
+	<p class="float-window__button__content">开店 | 售后 | 投诉</p>
+</div> -->
+</div>
+<script type="text/javascript" src="/skin/js/skip-link-focus-fix.js"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var screenReaderText = {"expand":"\u5c55\u5f00\u5b50\u83dc\u5355","collapse":"\u6298\u53e0\u5b50\u83dc\u5355"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="/skin/js/functions.js"></script>
+<script type="text/javascript" src="/skin/js/wp-embed.min.js"></script>
 </body>
+<script src="/skin/js/97a8bb5512338e5d873d15a1148509c1.js"></script>
+<script type="text/javascript">
+  window.openKefu = function(){
+    ysf.open();
+  }
+</script>
 </html>

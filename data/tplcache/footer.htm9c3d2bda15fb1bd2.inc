@@ -14,7 +14,7 @@ $z[3][4]['name']="cfg_powerby";
 $z[4]=Array("global","",2064,2088);
 $z[4][4]=array();
 $z[4][4]['name']="cfg_beian";
-$z[5]=Array("global","",2228,2249);
+$z[5]=Array("global","",2233,2254);
 $z[5][4]=array();
 $z[5][4]['name']="cfg_qq";
 

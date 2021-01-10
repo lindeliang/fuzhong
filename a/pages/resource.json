@@ -1,0 +1,104 @@
+{
+    "header": [
+        " *   ",
+        " *   文件描述：本文件为网页资源信息",
+        " *   success字段为下载保存成功的资源;failures字段则为下载保存失败的资源URL",
+        " *   success字段为标准树结构，每一层资源父子关系、URL和保存路径清晰明了",
+        " *   本文件仅为记录检测到的网页资源以便于调试，非专业人员可将本文件删除",
+        " *   详细介绍请参考: https://bazhan.me/faq",
+        " *   "
+    ],
+    "success": [
+        {
+            "url": "https://www.mockuai.com/supplier-form",
+            "path": "index.html",
+            "children": [
+                {
+                    "url": "/skin/images/fz_logo.png",
+                    "path": "images/16062006578383699.png"
+                },
+                {
+                    "url": "https://www.mockuai.com/js/runtime~app.46269b94.js",
+                    "path": "js/runtime~app.46269b94.js"
+                },
+                {
+                    "url": "https://www.mockuai.com/js/chunk-d210de00.2e8d5923.js",
+                    "path": "js/chunk-d210de00.2e8d5923.js"
+                },
+                {
+                    "url": "https://www.mockuai.com/js/chunk-vendors.13eaab42.js",
+                    "path": "js/chunk-vendors.13eaab42.js"
+                },
+                {
+                    "url": "https://www.mockuai.com/js/app.d49faf80.js",
+                    "path": "js/app.d49faf80.js"
+                },
+                {
+                    "url": "https://www.mockuai.com/css/chunk-vendors.8353e091.css",
+                    "path": "css/chunk-vendors.8353e091.css",
+                    "children": [
+                        {
+                            "url": "https://www.mockuai.com/fonts/element-icons.535877f5.woff",
+                            "path": "fonts/element-icons.535877f5.woff"
+                        },
+                        {
+                            "url": "https://www.mockuai.com/fonts/element-icons.732389de.ttf",
+                            "path": "fonts/element-icons.732389de.ttf"
+                        }
+                    ]
+                },
+                {
+                    "url": "https://www.mockuai.com/css/app.353a1b8d.css",
+                    "path": "css/app.353a1b8d.css",
+                    "children": [
+                        {
+                            "url": "https://mktv-in-cdn.mockuai.com/16022345081527608.png",
+                            "path": "images/16022345081527608.png"
+                        },
+                        {
+                            "url": "https://mktv-in-cdn.mockuai.com/16022344779961402.png",
+                            "path": "images/16022344779961402.png"
+                        },
+                        {
+                            "url": "https://mktv-in-cdn.mockuai.com/16022278673496369.png",
+                            "path": "images/16022278673496369.png"
+                        },
+                        {
+                            "url": "https://mktv-in-cdn.mockuai.com/16022278673215937.png",
+                            "path": "images/16022278673215937.png"
+                        },
+                        {
+                            "url": "https://mktv-in-cdn.mockuai.com/16022278673947736.png",
+                            "path": "images/16022278673947736.png"
+                        },
+                        {
+                            "url": "https://mktv-in-cdn.mockuai.com/16022278673805415.png",
+                            "path": "images/16022278673805415.png"
+                        },
+                        {
+                            "url": "https://mktv-in-cdn.mockuai.com/16022278673367719.png",
+                            "path": "images/16022278673367719.png"
+                        },
+                        {
+                            "url": "https://mktv-in-cdn.mockuai.com/16022278672953783.png",
+                            "path": "images/16022278672953783.png"
+                        },
+                        {
+                            "url": "https://mktv-in-cdn.mockuai.com/16022278673876189.png",
+                            "path": "images/16022278673876189.png"
+                        },
+                        {
+                            "url": "https://mktv-in-cdn.mockuai.com/16022278673718351.png",
+                            "path": "images/16022278673718351.png"
+                        }
+                    ]
+                },
+                {
+                    "url": "https://www.mockuai.com/css/chunk-d210de00.7ea5af67.css",
+                    "path": "css/chunk-d210de00.7ea5af67.css"
+                }
+            ]
+        }
+    ],
+    "failures": []
+}

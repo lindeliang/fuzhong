@@ -2,7 +2,7 @@
 global $cfg_Cs;
 $cfg_Cs=array();
 $cfg_Cs[1]=array(0,1,1,'5ZWG5a625ZCI5L2c');
-$cfg_Cs[2]=array(0,1,1,'572R57qi5o6l5Y2V');
+$cfg_Cs[2]=array(0,1,1,'572R57qi5byA5bqX');
 $cfg_Cs[3]=array(0,1,1,'55u05pKt55S15ZWG');
 $cfg_Cs[4]=array(0,1,1,'5qGI5L6L5YiG5Lqr');
 $cfg_Cs[5]=array(0,1,1,'5ZCI5L2c5ZOB54mM');
@@ -13,4 +13,5 @@ $cfg_Cs[22]=array(4,1,1,'5pyN6aWw566x5YyF');
 $cfg_Cs[17]=array(4,1,1,'55Sf5rS755m+6LSn');
 $cfg_Cs[18]=array(4,1,1,'6aOf5ZOB6aWu5paZ');
 $cfg_Cs[20]=array(0,1,1,'5a6Y5pa55bim6LSn5bCP56iL5bqP');
+$cfg_Cs[23]=array(2,1,1,'572R57qi5byA5bqX');
 ?>
