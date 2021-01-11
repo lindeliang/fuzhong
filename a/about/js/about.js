@@ -47,13 +47,13 @@
         });
         var map = new AMap.Map('map',
             {
-                center: [119.991927, 30.277723],
+                center: [113.4131, 23.1731],
                 zoom: 15,
             }
         );
         var marker = new AMap.Marker({
-            position: new AMap.LngLat(119.991927, 30.277723),   // 经纬度对象，也可以是经纬度构成的一维数组[116.39, 39.9]
-            title: '魔筷科技',
+            position: new AMap.LngLat(113.4131, 23.1731),   // 经纬度对象，也可以是经纬度构成的一维数组[116.39, 39.9]
+            title: '矩阵科技',
             icon: '//img.mockuai.com/tms/2019/9/16/upload_775c7c67f56c7f84784c134c5d43a3dd.png',
             offset: new AMap.Pixel(-18, -46)
         });

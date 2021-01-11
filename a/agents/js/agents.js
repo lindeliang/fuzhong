@@ -192,13 +192,13 @@
                 },
                 success: (res) => {
                     if (res.code === 10000 && res.data.data && res.data.data.length) {
-                        toastInfo($(".search__input").val() + "是魔筷官方授权代理商");
+                        toastInfo($(".search__input").val() + "是矩阵官方授权代理商");
                         return;
                     }
-                    toastInfo("对不起，暂未查到该代理商信息，请联系魔筷官方客服核实");
+                    toastInfo("对不起，暂未查到该代理商信息，请联系矩阵官方客服核实");
                 },
                 error: () => {
-                    toastInfo("对不起，暂未查到该代理商信息，请联系魔筷官方客服核实");
+                    toastInfo("对不起，暂未查到该代理商信息，请联系矩阵官方客服核实");
                 }
             });
         });
