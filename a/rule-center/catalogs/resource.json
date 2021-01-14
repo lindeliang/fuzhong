@@ -1,0 +1,50 @@
+{
+    "header": [
+        " *   ",
+        " *   文件描述：本文件为网页资源信息",
+        " *   success字段为下载保存成功的资源;failures字段则为下载保存失败的资源URL",
+        " *   success字段为标准树结构，每一层资源父子关系、URL和保存路径清晰明了",
+        " *   本文件仅为记录检测到的网页资源以便于调试，非专业人员可将本文件删除",
+        " *   详细介绍请参考: https://bazhan.me/faq",
+        " *   "
+    ],
+    "success": [
+        {
+            "url": "https://pc-helper.mockuai.com/catalogs?app_type=30&channel_id=1&page_id=14&tag=1&catalog_id=114",
+            "path": "index.html",
+            "children": [
+                {
+                    "url": "https://pc-helper.mockuai.com/vendor_b8899fe6580d09e72200.dll.js",
+                    "path": "js/vendor_b8899fe6580d09e72200.dll.js"
+                },
+                {
+                    "url": "https://pc-helper.mockuai.com/js/chunk-vendors.d789ab6d.js",
+                    "path": "js/chunk-vendors.d789ab6d.js"
+                },
+                {
+                    "url": "https://pc-helper.mockuai.com/js/app.cbe40742.js",
+                    "path": "js/app.cbe40742.js"
+                },
+                {
+                    "url": "https://pc-helper.mockuai.com/css/chunk-vendors.c8a88a08.css",
+                    "path": "css/chunk-vendors.c8a88a08.css",
+                    "children": [
+                        {
+                            "url": "https://pc-helper.mockuai.com/fonts/element-icons.535877f5.woff",
+                            "path": "fonts/element-icons.535877f5.woff"
+                        },
+                        {
+                            "url": "https://pc-helper.mockuai.com/fonts/element-icons.732389de.ttf",
+                            "path": "fonts/element-icons.732389de.ttf"
+                        }
+                    ]
+                },
+                {
+                    "url": "https://pc-helper.mockuai.com/css/app.173e7bf6.css",
+                    "path": "css/app.173e7bf6.css"
+                }
+            ]
+        }
+    ],
+    "failures": []
+}

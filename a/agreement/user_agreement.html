@@ -1,0 +1,2818 @@
+<!DOCTYPE html>
+<html lang="zh-cn" data-dpr="1" style="font-size: 20px">
+	<head>
+    <meta charset="utf-8" />
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="yes" name="apple-touch-fullscreen" />
+    <meta content="telephone=no,email=no" name="format-detection" />
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no"/>
+    <title>矩阵直播带货平台用户服务协议</title>
+    <link rel="stylesheet" href="css/min.css" media="all" />
+    <style type="text/css">
+		.tms-richtext {
+		width: 90%;
+		margin: 0.5rem auto;
+    }
+    </style>
+    <script type="text/javascript" src="js/zepto.min.js"></script>
+    <script>
+		var _hmt = _hmt || [];
+		(function () {
+		var hm = document.createElement("script");
+		hm.src = "https://hm.baidu.com/hm.js?1b8be1a831ff3157b5274d5477f053de";
+		var s = document.getElementsByTagName("script")[0];
+		s.parentNode.insertBefore(hm, s);
+		})();
+    </script>
+</head>
+<body style="overflow-x: hidden">
+    <div class="wrapper">
+      <input id="app-share-title" type="hidden" value />
+      <input id="app-share-content" type="hidden" value />
+      <input id="app-share-url" type="hidden" value />
+      <input id="app-share-image" type="hidden" value />
+      <input id="app-share-desc" type="hidden" value />
+      <style>
+        html {
+          background-color: ;
+        }
+      </style>
+      <script src="js/jweixin-1.0.0.js"></script>
+      <script src="js/weixinapi.js"></script>
+      <script>
+        window.addEventListener("load", function () {
+          $("#app-share-url").val(location.href);
+          if (!$("#app-share-image").val()) {
+            $("#app-share-image").val(
+              "http://img01.taojae.com/party/0834ccdcbc446e95037597fa397cd53d.png"
+            );
+          }
+          var shareUrl = "http://common.feed.9t2.net/wxsign/";
+          if (location.href.indexOf("act.feed.9t2.net") == -1) {
+            if (location.href.indexOf("h5.feed.9t2.net") == -1) {
+              shareUrl = location.protocol + "//" + location.host + "/wxsign/";
+            } else {
+              shareUrl =
+                location.href.match(/^http:\/\/h5.feed.9t2.net\/[\w-.?%&=]*/g) +
+                "/wxsign/index.php";
+            }
+          }
+          var partner_code = lib.cookie.get("invitation_code")
+            ? "5-" + lib.cookie.get("invitation_code")
+            : "";
+          var httpurl = new lib.httpurl(location.href);
+          partner_code && (httpurl.params.partner_code = partner_code);
+          var link = httpurl.toString();
+          link = link.replace("http://m.yangdongxi.com", "http://m.ydx.hk");
+          lib.WeixinApi.init({
+            url: shareUrl,
+            debug: false,
+            ready: function (Api) {
+              var wxData = {
+                appId: Api.sign.appId,
+                imgUrl:
+                  "" ||
+                  "http://img01.taojae.com/party/0834ccdcbc446e95037597fa397cd53d.png",
+                link: link,
+                desc: "",
+                title: "",
+              };
+              var wxCallbacks = {
+                cancel: function (resp) {},
+                success: function (resp) {},
+              };
+              Api.shareToFriend(wxData, wxCallbacks);
+              Api.shareToTimeline(wxData, wxCallbacks);
+              Api.shareToWeibo(wxData, wxCallbacks);
+              Api.shareToQQ(wxData, wxCallbacks);
+            },
+          });
+        });
+      </script>
+      <style>
+        .tms-richtext {
+          line-height: 1.5;
+        }
+        .tms-richtext h1 {
+          font-size: 32px;
+          font-weight: bold;
+        }
+        .tms-richtext h2 {
+          font-size: 24px;
+          font-weight: bold;
+        }
+        .tms-richtext h3 {
+          font-size: 18px;
+          font-weight: bold;
+        }
+        .tms-richtext h4 {
+          font-size: 14px;
+          font-weight: bold;
+        }
+        .tms-richtext h5 {
+          font-size: 13px;
+          font-weight: bold;
+        }
+        .tms-richtext h6 {
+          font-size: 11px;
+          font-weight: bold;
+        }
+        .tms-richtext i {
+          font-style: italic;
+        }
+        .tms-richtext b {
+          font-weight: bold;
+        }
+      </style>
+      <div class="tms-richtext">
+        <h3 style="text-align: center">
+          <b
+            ><span
+              ><b
+                ><span
+                  id="selectionBoundary_1603353967977_07364990641710656"
+                  class="rangySelectionBoundary"
+                  >&#65279;</span
+                >矩阵直播带货平台</b
+              ></span
+            ></b
+          ><b
+            ><span><b>用户</b></span></b
+          ><b
+            ><span
+              ><b
+                >服务协议<span
+                  id="selectionBoundary_1603353967976_40304558055362794"
+                  class="rangySelectionBoundary"
+                  >&#65279;</span
+                ></b
+              ></span
+            ></b
+          ><b
+            ><span><b></b></span
+          ></b>
+        </h3>
+        <p style="text-align: justify; text-align: justify">
+          <span><br /></span>
+        </p>
+        <p style="text-align: right">
+          <span>版本</span><span>更新</span><span>日期：20</span><span>21</span
+          ><span>年</span><span>1</span><span>月</span><span>12</span
+          ><span>日</span><span></span>
+        </p>
+        <p style="text-align: left">
+          <b
+            ><span
+              ><b><br /></b></span
+          ></b>
+        </p>
+        <h3>
+          <b
+            ><span><b>提示条款</b></span></b
+          ><b
+            ><span><b></b></span
+          ></b>
+        </h3>
+        <p style="text-align: left">
+          <span><br /></span>
+        </p>
+        <p style="text-align: left">
+          <span>欢迎您来到矩阵直播带货平台并使用矩阵直播带货平台服务！</span
+          ><span></span>
+        </p>
+        <p style="text-align: left">
+          <span><br /></span>
+        </p>
+        <p style="text-align: left">
+          <span>为使用矩阵直播带货平台服务，您应当认真阅读并遵守《矩阵直播带货平台</span
+          ><span>用户</span><span>服务协议》（以下简称“本协议”）。</span
+          ><b
+            ><u
+              ><span
+                ><b
+                  >请您在进一步操作之前务必审慎阅读、充分理解本协议各条款内容，特别是以加粗形式提示您注意的关于免除或者限制责任的条款、法律适用和争议解决条款。</b
+                ></span
+              ></u
+            ></b
+          ><span>如您对协议有任何疑问，可向矩阵直播带货平台客服咨询。</span
+          ><span></span>
+        </p>
+        <p style="text-align: left">
+          <span><br /></span>
+        </p>
+        <p style="text-align: left">
+          <span
+            >您有权选择同意或不同意本协议。当您按照注册页面提示填写信息、阅读并同意本协议且完成全部注册程序后，或使用第三方账号登录矩阵直播带货平台，即视为您已充分阅读、理解并接受本协议的全部内容，并与矩阵直播带货达成一致，成为矩阵直播带货平台“用户”。</span
+          ><b
+            ><u
+              ><span
+                ><b
+                  >阅读本协议的过程中，如果您不同意本协议或其中任何条款约定，您应立即停止注册程序并停止使用矩阵直播带货平台服务。</b
+                ></span
+              ></u
+            ></b
+          ><b
+            ><u
+              ><span><b></b></span></u
+          ></b>
+        </p>
+        <p style="text-align: left">
+          <span><br /></span>
+        </p>
+        <p style="text-align: left">
+          <span
+            >请您在决定注册或使用矩阵直播带货平台服务前再次确认您已知悉并完全理解本协议的所有内容。</span
+          ><b
+            ><u
+              ><span
+                ><b
+                  >如果您未满18周岁，请务必在家长和其他法定监护人的陪同下阅读本协议，并在进行注册、下单、支付等任何行为或使用矩阵直播带货平台的其他任何服务前，应事先征得您的家长和其他法定监护人的同意。</b
+                ></span
+              ></u
+            ></b
+          ><b
+            ><span><b></b></span
+          ></b>
+        </p>
+        <p style="text-align: left">
+          <span><br /></span>
+        </p>
+        <p style="text-align: left">
+          <span>本协议为《矩阵直播带货平台</span><span>用户</span
+          ><span
+            >服务协议》最新修订版本，自本协议生效之日起，矩阵直播带货平台各处所称“矩阵直播带货平台</span
+          ><span>用户</span><span>服务协议”均指本协议。</span><span></span>
+        </p>
+        <p style="text-align: left">
+          <b
+            ><span
+              ><b><br /></b></span
+          ></b>
+        </p>
+        <h3>
+          <b
+            ><span><b>1、定义</b></span></b
+          ><b
+            ><span><b></b></span
+          ></b>
+        </h3>
+        <p style="text-align: left">
+          <span><br /></span>
+        </p>
+        <p style="text-align: left">
+          <span>1.1</span
+          ><b
+            ><span><b>【矩阵直播带货平台】：</b></span></b
+          ><span
+            >指矩阵直播带货平台经营者经营的电商平台，包括但不限于矩阵直播带货手机APP客户端</span
+          ><span>、矩阵直播带货微信小程序</span><span>。</span><span></span>
+        </p>
+        <p style="text-align: left">
+          <span><br /></span>
+        </p>
+        <p style="text-align: left">
+          <span>1.2</span
+          ><b
+            ><span><b>【矩阵直播带货】：</b></span></b
+          ><span>指矩阵直播带货平台的经营者。本协议项下，</span
+          ><b
+            ><u
+              ><span
+                ><b
+                  >矩阵直播带货平台经营者可能根据矩阵直播带货平台的业务调整而发生变更，具体以矩阵直播带货平台公示的证照信息确认的主体为准。矩阵直播带货平台经营者的变更不会影响本协议项下约定的各项权利义务。您有权选择</b
+                ></span
+              ></u
+            ></b
+          ><b
+            ><u
+              ><span><b>同意</b></span></u
+            ></b
+          ><b
+            ><u
+              ><span><b>或不</b></span></u
+            ></b
+          ><b
+            ><u
+              ><span><b>同意</b></span></u
+            ></b
+          ><b
+            ><u
+              ><span><b>本协议</b></span></u
+            ></b
+          ><b
+            ><u
+              ><span
+                ><b
+                  >项下矩阵直播带货主体的变更，具体适用本协议第2.2条关于协议变更的约定。</b
+                ></span
+              ></u
+            ></b
+          ><b
+            ><u
+              ><span><b></b></span></u
+          ></b>
+        </p>
+        <p style="text-align: left">
+          <span><br /></span>
+        </p>
+        <p style="text-align: left">
+          <span>1.3</span
+          ><b
+            ><span><b>【矩阵直播带货平台服务】：</b></span></b
+          ><span>指矩阵直播带货基于互联网，以包括手机APP客户端、平台网站</span
+          ><span>（</span
+          ><a href="https://feed.9t2.net"
+            ><u><span class="15">feed.9t2</span></u
+            ><u><span class="15">.net</span></u></a
+          ><span>）</span><span>、</span><span>微信小程序</span
+          ><span
+            >等在内的各种形态（包括未来技术发展出现的新的服务形态）向您提供的各项服务。</span
+          ><span></span>
+        </p>
+        <p style="text-align: left">
+          <span><br /></span>
+        </p>
+        <p style="text-align: left">
+          <span>1.4</span
+          ><b
+            ><span><b>【矩阵直播带货平台规则】：</b></span></b
+          ><span
+            >包括所有矩阵直播带货已经发布及后续可能发布、修订的各类规则、规范、解读、实施细则、产品流程说明、通知、公告等。</span
+          ><span></span>
+        </p>
+        <p style="text-align: left">
+          <span><br /></span>
+        </p>
+        <p style="text-align: left"></p>
+        <h3><span>2、协议范围及变更</span><span></span></h3>
+        <p style="text-align: left">
+          <span><br /></span>
+        </p>
+        <p style="text-align: left">
+          <span>2.1</span
+          ><b
+            ><span><b>【协议范围】</b></span></b
+          ><span
+            >由于互联网高速发展，您与矩阵直播带货签署的本协议列明的条款并不能完整罗列并覆盖您与矩阵直播带货所有权利与义务，现有的约定也不能保证完全符合未来发展的需求。因此，</span
+          ><b
+            ><u
+              ><span><b>矩阵直播带货平台隐私</b></span></u
+            ></b
+          ><b
+            ><u
+              ><span><b>权</b></span></u
+            ></b
+          ><b
+            ><u
+              ><span
+                ><b
+                  >政策、矩阵直播带货平台规则均为本协议的补充协议，与本协议不可分割且具有同等法律效力。如您使用矩阵直播带货平台服务，视为您同意上述补充协议。</b
+                ></span
+              ></u
+            ></b
+          ><span></span>
+        </p>
+        <p style="text-align: left">
+          <span><br /></span>
+        </p>
+        <p style="text-align: left">
+          <span>2.2</span
+          ><b
+            ><span><b>【协议变更】</b></span></b
+          ><b
+            ><u
+              ><span
+                ><b
+                  >矩阵直播带货可根据国家法律法规变化及维护交易秩序、保护消费者权益需要，不时修改本协议、补充协议，变更后的协议、补充协议（下称“变更事项”）将通过法定程序并以本协议第9条约定的方式通知您。</b
+                ></span
+              ></u
+            ></b
+          ><b
+            ><span><b></b></span
+          ></b>
+        </p>
+        <p style="text-align: left">
+          <span><br /></span>
+        </p>
+        <p style="text-align: left">
+          <span
+            >如您不同意变更事项，您有权于变更事项确定的生效日前联系矩阵直播带货反馈意见。如反馈意见得以采纳，矩阵直播带货将酌情调整变更事项。</span
+          ><span></span>
+        </p>
+        <p style="text-align: left">
+          <span><br /></span>
+        </p>
+        <p style="text-align: left">
+          <span
+            >如您对已生效的变更事项仍不同意的，您应当于变更事项确定的生效之日起停止使用矩阵直播带货平台服务，变更事项对您不产生效力；如您在变更事项生效后仍继续使用矩阵直播带货平台服务，则视为您同意已生效的变更事项。</span
+          ><span></span>
+        </p>
+        <p style="text-align: left">
+          <span><br /></span>
+        </p>
+        <p style="text-align: left"></p>
+        <h3><span>3、用户账户注册与使用</span><span></span></h3>
+        <p style="text-align: left"></p>
+        <p style="text-align: left">
+          <span><br /></span>
+        </p>
+        <p style="text-align: left"><span>3.1  账户注册</span><span></span></p>
+        <p></p>
+        <p style="text-align: left">
+          <b
+            ><span
+              ><b><br /></b></span
+          ></b>
+        </p>
+        <p style="text-align: left">
+          <b
+            ><span><b>【用户资格</b></span></b
+          ><span
+            >】您确认，在您开始注册程序使用矩阵直播带货平台服务前，您应当具备中华人民共和国法律规定的与您行为相适应的民事行为能力。</span
+          ><b
+            ><u
+              ><span
+                ><b
+                  >若您不具备前述与您行为相适应的民事行为能力，则您及您的监护人应依照法律规定承担因此而导致的一切后果。</b
+                ></span
+              ></u
+            ></b
+          ><span></span>
+        </p>
+        <p style="text-align: left">
+          <span><br /></span>
+        </p>
+        <p style="text-align: left">
+          <span
+            >此外，您还需确保您不是任何国家、国际组织或者地域实施的贸易限制、制裁或其他法律、规则限制的对象，否则您可能无法正常注册及使用矩阵直播带货平台服务。</span
+          ><span></span>
+        </p>
+        <p style="text-align: left">
+          <b
+            ><span
+              ><b><br /></b></span
+          ></b>
+        </p>
+        <p style="text-align: left">
+          <b
+            ><span><b>【信息真实】</b></span></b
+          ><span
+            >在使用矩阵直播带货平台服务时，您应当按矩阵直播带货平台页面的提示准确完整地提供您的信息（包括您的姓名及电子邮件地址、联系电话、联系地址等），以便矩阵直播带货与您联系。您了解并同意，您有义务保持您提供信息的真实性及有效性。</span
+          ><span></span>
+        </p>
+        <p style="text-align: left">
+          <b
+            ><span
+              ><b><br /></b></span
+          ></b>
+        </p>
+        <p style="text-align: left">
+          <b
+            ><span><b>【真实身份】</b></span></b
+          ><span
+            >因国家法律法规、监管要求及特定门类的服务（如金融服务等）需要，您有可能需要在注册或使用该等服务的特定环节中填写真实的身份信息，并需通过相关验证流程后方可使用服务，如您填写的身份信息不完整、不真实或未通过验证，将导致您无法使用该服务、损害自身、他人利益或造成其他不利后果，该等后果将由您自行承担。</span
+          ><span></span>
+        </p>
+        <p style="text-align: left">
+          <b
+            ><span
+              ><b><br /></b></span
+          ></b>
+        </p>
+        <p style="text-align: left">
+          <b
+            ><span><b>【更新维护】</b></span></b
+          ><span
+            >您应当及时更新您提供的信息，在法律有明确规定要求矩阵直播带货作为平台服务提供者必须对部分用户的信息进行核实的情况下，矩阵直播带货将依法不时地对您的信息进行检查核实，您应当配合提供最新、真实、完整、有效的信息。</span
+          ><span></span>
+        </p>
+        <p style="text-align: left">
+          <span><br /></span>
+        </p>
+        <p style="text-align: left">
+          <span
+            >如矩阵直播带货按您最后一次提供的信息与您联系未果、您未按矩阵直播带货的要求及时提供信息、您提供的信息存在明显不实或行政司法机关核实您提供的信息无效的，您将承担因此对您自身、他人及矩阵直播带货造成的全部损失与不利后果。矩阵直播带货可向您发出询问或要求整改的通知，并要求您进行重新认证，直至中止、终止对您提供部分或全部矩阵直播带货平台服务，矩阵直播带货对此不承担责任。</span
+          ><span></span>
+        </p>
+        <p style="text-align: left">
+          <b
+            ><span
+              ><b><br /></b></span
+          ></b>
+        </p>
+        <p style="text-align: left">
+          <b
+            ><span><b>【用户名的合法性】</b></span></b
+          ><span
+            >您设置的矩阵直播带货平台用户名（昵称）不得违反国家法律法规及矩阵直播带货平台规则关于用户名（昵称）的管理规定，不得包含违法、涉嫌侵犯他人权利、有违公序良俗或干扰矩阵直播带货平台运营秩序等相关信息，否则矩阵直播带货有权向您发出要求修改的通知，直至中止、终止对您提供部分或全部矩阵直播带货平台服务，矩阵直播带货对此不承担责任。</span
+          ><span></span>
+        </p>
+        <p style="text-align: left">
+          <span><br /></span>
+        </p>
+        <p style="text-align: left"></p>
+        <p style="text-align: left">
+          <b
+            ><span><b>3.2  账户说明</b></span></b
+          ><b
+            ><span><b></b></span
+          ></b>
+        </p>
+        <p style="text-align: left">
+          <b
+            ><span
+              ><b><br /></b></span
+          ></b>
+        </p>
+        <p style="text-align: left">
+          <b
+            ><span><b>【账户获得】</b></span></b
+          ><span
+            >当您按照注册页面提示填写信息、阅读并同意本协议且完成全部注册程序后，您可获得矩阵直播带货平台账户并成为矩阵直播带货平台用户。</span
+          ><span></span>
+        </p>
+        <p style="text-align: left">
+          <span><br /></span>
+        </p>
+        <p style="text-align: left">
+          <span>矩阵直播带货平台原则上只允许每位用户使用一个矩阵直播带货平台账户。</span
+          ><b
+            ><u
+              ><span
+                ><b
+                  >如有证据证明或矩阵直播带货根据矩阵直播带货平台规则判断您存在不当注册或不当使用多个矩阵直播带货平台账户的情形，矩阵直播带货平台可采取冻结或关闭账户、取消订单、拒绝提供服务等措施，如给矩阵直播带货及其关联方造成损失的，您还应承担赔偿责任。</b
+                ></span
+              ></u
+            ></b
+          ><b
+            ><u
+              ><span><b></b></span></u
+          ></b>
+        </p>
+        <p style="text-align: left">
+          <b
+            ><span
+              ><b><br /></b></span
+          ></b>
+        </p>
+        <p style="text-align: left">
+          <b
+            ><span><b>【账户登录】</b></span></b
+          ><span
+            >您有权使用您确认的手机号码或第三方账号登录矩阵直播带货平台。为了您的使用便利，矩阵直播带货平台将适时提供邮箱登录、指纹识别、人脸识别等更为多样化、安全便捷的登录方式，矩阵直播带货平台可根据相关法律法规、监管要求、用户体验、风险控制等因素对登录方式予以适时调整或增减。</span
+          ><span></span>
+        </p>
+        <p style="text-align: left">
+          <b
+            ><span
+              ><b><br /></b></span
+          ></b>
+        </p>
+        <p style="text-align: left">
+          <b
+            ><span><b>【账户使用】</b></span></b
+          ><span
+            >由于您的矩阵直播带货平台账户关联您的个人信息及矩阵直播带货平台商业信息，您的矩阵直播带货平台账户仅限您本人使用。</span
+          ><b
+            ><u
+              ><span
+                ><b
+                  >未经矩阵直播带货同意，您直接或间接授权第三方使用您矩阵直播带货平台账户或获取您账户项下信息的行为无效。</b
+                ></span
+              ></u
+            ></b
+          ><span
+            >如矩阵直播带货根据矩阵直播带货平台规则中约定的违约认定程序及标准判断您矩阵直播带货账户的使用可能危及您的账户安全及/或矩阵直播带货平台信息安全的，矩阵直播带货平台可拒绝提供相应服务或终止本协议、冻结或注销注册账户，并可要求您承担因此产生的一切责任和损失。</span
+          ><span></span>
+        </p>
+        <p style="text-align: left">
+          <b
+            ><span
+              ><b><br /></b></span
+          ></b>
+        </p>
+        <p style="text-align: left">
+          <b
+            ><span><b>【限制冻结】</b></span></b
+          ><b
+            ><u
+              ><span
+                ><b
+                  >您知悉并同意，在符合法律法规的规定，或经国家机关要求的前提下，矩阵直播带货平台有权对您的注册账户进行限制或冻结，</b
+                ></span
+              ></u
+            ></b
+          ><span>在该等情况下，您可能无法继续登陆或使用您的注册账户。</span
+          ><span></span>
+        </p>
+        <p style="text-align: left">
+          <span><br /></span>
+        </p>
+        <p style="text-align: left"></p>
+        <p style="text-align: left">
+          <b
+            ><span><b>3.3  账户安全规范</b></span></b
+          ><b
+            ><span><b></b></span
+          ></b>
+        </p>
+        <p style="text-align: left">
+          <b
+            ><span
+              ><b><br /></b></span
+          ></b>
+        </p>
+        <p style="text-align: left">
+          <b
+            ><span><b>【账户安全保管义务】</b></span></b
+          ><span
+            >您的账户为您自行设置并由您保管，矩阵直播带货任何时候均不会主动要求您提供您的账户密码。因此，建议您务必保管好您的账户，并确保您在每个上网时段结束时退出登录并以正确步骤离开矩阵直播带货平台。此外，您不应轻信借款、索要密码或其他涉及财产的网络信息。涉及财产操作的，请一定先核实对方身份。</span
+          ><span></span>
+        </p>
+        <p style="text-align: left">
+          <span><br /></span>
+        </p>
+        <p style="text-align: left">
+          <span
+            >您知悉并同意，如您在账户信息的保管上、相关上网设备的网络安全维护上存在任何过失，或是因您主动泄露或因您遭受他人攻击、诈骗等行为导致账户丢失、泄露，您应对此产生的任何损失和后果负责，矩阵直播带货对此不负任何责任，您应通过司法、行政等救济途径向侵权行为人追偿，如矩阵直播带货因此产生相关支出，矩阵直播带货将有权向您追偿。</span
+          ><span></span>
+        </p>
+        <p style="text-align: left">
+          <b
+            ><span
+              ><b><br /></b></span
+          ></b>
+        </p>
+        <p style="text-align: left">
+          <b
+            ><span><b>【账户行为责任自负】</b></span></b
+          ><span
+            >除矩阵直播带货存在过错外，您应对您账户项下的所有行为结果（包括但不限于在线签署各类协议、发布信息、购买商品及服务、披露信息等）负责，</span
+          ><b
+            ><u
+              ><span
+                ><b
+                  >通过您的账户所发生的上述各项行为将视为您本人的真实意思表示</b
+                ></span
+              ></u
+            ></b
+          ><b
+            ><u
+              ><span><b>及您本人作出的行为</b></span></u
+            ></b
+          ><b
+            ><u
+              ><span><b>。</b></span></u
+            ></b
+          ><u><span></span></u>
+        </p>
+        <p style="text-align: left">
+          <span><br /></span>
+        </p>
+        <p style="text-align: left">
+          <span
+            >您通过账户在接受矩阵直播带货平台的各项服务中所上传、发送的任何内容都应具有合法来源，如相关内容涉及任何第三方的合法权益，应事先获得相应的许可。如矩阵直播带货平台收到涉及您的相关举报或投诉，矩阵直播带货平台可采取相关法律法规所要求或允许的方式，向相关争议方、相关部门提供包括账户在内的必要的信息，以便解决纠纷争议，保护正当权利人的合法权益。</span
+          ><span></span>
+        </p>
+        <p style="text-align: left">
+          <b
+            ><span
+              ><b><br /></b></span
+          ></b>
+        </p>
+        <p style="text-align: left">
+          <b
+            ><span><b>【日常维护须知】</b></span></b
+          ><span
+            >如发现任何未经授权使用您账户登录矩阵直播带货平台或其他可能导致您账户遭窃、遗失的情况，建议您立即通知矩阵直播带货。您理解矩阵直播带货对您的任何请求采取行动均需要合理时间，且矩阵直播带货应您请求而采取的行动可能无法避免或阻止侵害后果的形成或扩大，除矩阵直播带货存在法定过错外，矩阵直播带货不承担责任。</span
+          ><span></span>
+        </p>
+        <p style="text-align: left">
+          <span><br /></span>
+        </p>
+        <p style="text-align: left"></p>
+        <h3>
+          <b
+            ><span><b>4、矩阵直播带货平台服务及规范</b></span></b
+          ><b
+            ><span><b></b></span
+          ></b>
+        </h3>
+        <p style="text-align: left">
+          <b
+            ><span
+              ><b><br /></b></span
+          ></b>
+        </p>
+        <p style="text-align: left">
+          <b
+            ><span><b>4.1  商品及/或服务的购买与评价</b></span></b
+          ><b
+            ><span><b></b></span
+          ></b>
+        </p>
+        <p style="text-align: left">
+          <b
+            ><span
+              ><b><br /></b></span
+          ></b>
+        </p>
+        <p style="text-align: left">
+          <b
+            ><span><b>【订单信息】</b></span></b
+          ><span
+            >当您在矩阵直播带货平台购买商品及/或服务时，请您务必仔细确认所购商品的品名、价格、数量、型号、规格、尺寸或服务的时间、内容、限制性要求等重要事项，</span
+          ><b
+            ><u
+              ><span><b>并在下单时核实</b></span></u
+            ></b
+          ><b
+            ><u
+              ><span><b>订单项下</b></span></u
+            ></b
+          ><b
+            ><u
+              ><span
+                ><b
+                  >的联系地址、电话、收货人等信息。如您填写的收货人非您本人，则该收货人的</b
+                ></span
+              ></u
+            ></b
+          ><b
+            ><u
+              ><span><b>收货</b></span></u
+            ></b
+          ><b
+            ><u
+              ><span><b>行为和意思表示产生的法律后果均由您承担。</b></span></u
+            ></b
+          ><u><span></span></u>
+        </p>
+        <p style="text-align: left">
+          <b
+            ><span
+              ><b><br /></b></span
+          ></b>
+        </p>
+        <p style="text-align: left">
+          <b
+            ><span><b>【商品缺货】</b></span></b
+          ><span
+            >尽管您的交易相对方做出最大的努力，但由于市场变化及各种以合理商业努力难以控制因素的影响，无法避免您提交的订单信息中的商品出现缺货、价格等信息标示错误等情况；如您下单所购买的商品及/或服务出现以上情况，您有权取消订单，您的交易相对方亦有权自行取消订单，若您已经付款，则为您办理退款。</span
+          ><span></span>
+        </p>
+        <p style="text-align: left">
+          <b
+            ><span
+              ><b><br /></b></span
+          ></b>
+        </p>
+        <p style="text-align: left">
+          <b
+            ><span><b>【商品限购】</b></span></b
+          ><span
+            >您的交易相对方会在页面公示某些商品的限购数量。上述限购数量，除特殊说明外并非仅针对单一账户，如您在一段时间内通过多个账户下单，单个订单数量虽未超过该商品限购数量，但通过收件地址、下单IP地址、联系电话、收货人等判断实际购买人为一人或与您有紧密关联，且多个订单合计购买数量超过该商品限购数量的，您的交易相对方有权取消相关订单。</span
+          ><span></span>
+        </p>
+        <p style="text-align: left">
+          <b
+            ><span
+              ><b><br /></b></span
+          ></b>
+        </p>
+        <p style="text-align: left">
+          <b
+            ><span><b>【虚拟权益】</b></span></b
+          ><span
+            >您可以根据矩阵直播带货平台事先公示的规则，通过购物、评价、晒单、网站活动等方式获得</span
+          ><span>积分等权益</span
+          ><span>。通过参与活动，您也可能会获得优惠券。</span><span>积分</span
+          ><span>和优惠券都具有特定的使用规则和有效期，逾期将被清零</span
+          ><u><span>；</span></u
+          ><b
+            ><u
+              ><span
+                ><b
+                  >请您不时关注您的优惠券有效期，矩阵直播带货不对逾期清零的</b
+                ></span
+              ></u
+            ></b
+          ><b
+            ><u
+              ><span><b>积分及</b></span></u
+            ></b
+          ><b
+            ><u
+              ><span><b>优惠券负责。</b></span></u
+            ></b
+          ><u><span></span></u>
+        </p>
+        <p style="text-align: left">
+          <b
+            ><span
+              ><b><br /></b></span
+          ></b>
+        </p>
+        <p style="text-align: left">
+          <b
+            ><span><b>【交易秩序】</b></span></b
+          ><span
+            >您的购买行为应当基于真实的消费需求，不得存在对商品及/或服务实施恶意购买、恶意维权等扰乱矩阵直播带货平台正常交易秩序的行为。基于维护矩阵直播带货平台交易秩序及交易安全的需要，</span
+          ><b
+            ><u
+              ><span
+                ><b
+                  >矩阵直播带货发现上述情形时可主动执行关闭相关交易订单等操作。</b
+                ></span
+              ></u
+            ></b
+          ><span></span>
+        </p>
+        <p style="text-align: left">
+          <b
+            ><span
+              ><b><br /></b></span
+          ></b>
+        </p>
+        <p style="text-align: left">
+          <b
+            ><span><b>【合同的成立与生效】</b></span></b
+          ><span
+            >您通过矩阵直播带货平台下达订单后，仅表示系统接收到了您下达的订单。</span
+          ><b
+            ><u
+              ><span
+                ><b
+                  >只有您成功支付价款后，您与销售方之间就已支付价款部分的商品及/或服务的买卖合同才成立。</b
+                ></span
+              ></u
+            ></b
+          ><span></span>
+        </p>
+        <p style="text-align: left">
+          <b
+            ><span
+              ><b><br /></b></span
+          ></b>
+        </p>
+        <p style="text-align: left">
+          <b
+            ><span><b>【评价】</b></span></b
+          ><span
+            >您有权在矩阵直播带货平台提供的评价系统中对您购买的商品及/或服务进行评价。您的所有评价行为应遵守法律法规及/或矩阵直播带货平台规则的相关规定，评价内容应当客观真实，不应包含任何污言秽语、色情低俗、广告信息及法律法规与本协议列明的其他禁止性信息；</span
+          ><b
+            ><u
+              ><span
+                ><b
+                  >您不应以不正当方式帮助他人提升信用或利用评价权利对其他用户实施威胁、敲诈勒索。矩阵直播带货可按照法律法规及/或矩阵直播带货平台规则的相关规定对您发布的违规信息进行屏蔽等，并有权视情形对您采取身份验证、限制购买行为等处理措施。</b
+                ></span
+              ></u
+            ></b
+          ><b
+            ><u
+              ><span><b></b></span></u
+          ></b>
+        </p>
+        <p style="text-align: left">
+          <b
+            ><span
+              ><b><br /></b></span
+          ></b>
+        </p>
+        <p style="text-align: left">
+          <b
+            ><span><b>【异常订单的处理】</b></span></b
+          ><span
+            >如矩阵直播带货发现您通过矩阵直播带货平台下达的订单存在违反法律规定或者本协议约定的异常情形的，</span
+          ><b
+            ><u
+              ><span
+                ><b
+                  >矩阵直播带货有权采取关闭相关交易订单、限制账户使用功能、中止或终止服务等措施而无需事先通知您。</b
+                ></span
+              ></u
+            ></b
+          ><b
+            ><u
+              ><span><b></b></span></u
+          ></b>
+        </p>
+        <p style="text-align: left">
+          <b
+            ><span
+              ><b><br /></b></span
+          ></b>
+        </p>
+        <p style="text-align: left">
+          <b
+            ><span><b>【</b></span></b
+          ><b
+            ><span><b>注意事项</b></span></b
+          ><b
+            ><span><b>】</b></span></b
+          ><b
+            ><u
+              ><span><b>您</b></span></u
+            ></b
+          ><b
+            ><u
+              ><span><b>确认并同意</b></span></u
+            ></b
+          ><b
+            ><u
+              ><span><b>自行承担使用</b></span></u
+            ></b
+          ><b
+            ><u
+              ><span><b>矩阵直播带货平台服务</b></span></u
+            ></b
+          ><b
+            ><u
+              ><span><b>期间</b></span></u
+            ></b
+          ><b
+            ><u
+              ><span
+                ><b>交易款项（包括但不限于您在矩阵直播带货平台购买商品及</b></span
+              ></u
+            ></b
+          ><b
+            ><u
+              ><span><b>/或服务</b></span></u
+            ></b
+          ><b
+            ><u
+              ><span><b>之价款）</b></span></u
+            ></b
+          ><b
+            ><u
+              ><span><b>贬值</b></span></u
+            ></b
+          ><b
+            ><u
+              ><span><b>、汇率波动及收益损失等</b></span></u
+            ></b
+          ><b
+            ><u
+              ><span><b>风险，且矩阵直播带货无须就此向</b></span></u
+            ></b
+          ><b
+            ><u
+              ><span><b>您</b></span></u
+            ></b
+          ><b
+            ><u
+              ><span><b>支付任何孳息或其他对价</b></span></u
+            ></b
+          ><b
+            ><u
+              ><span
+                ><b
+                  >。您对于您使用矩阵直播带货平台服务期间该交易款项产生的收益（如利息和其他孳息）不享有权利。为更好地保护您的消费权益和实现</b
+                ></span
+              ></u
+            ></b
+          ><b
+            ><u
+              ><span><b>矩阵直播带货平台</b></span></u
+            ></b
+          ><b
+            ><u
+              ><span><b>职能，矩阵直播带货就您</b></span></u
+            ></b
+          ><b
+            ><u
+              ><span><b>使用</b></span></u
+            ></b
+          ><b
+            ><u
+              ><span><b>矩阵直播带货平台服务</b></span></u
+            ></b
+          ><b
+            ><u
+              ><span><b>期间</b></span></u
+            ></b
+          ><b
+            ><u
+              ><span
+                ><b>交易款项产生的收益（如利息或其他孳息）享有所有权。</b></span
+              ></u
+            ></b
+          ><b
+            ><u
+              ><span><b></b></span></u
+          ></b>
+        </p>
+        <p style="text-align: left"><br /></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p style="text-align: left">
+          <b
+            ><span><b></b></span
+          ></b>
+        </p>
+        <p style="text-align: left">
+          <b
+            ><span><b></b></span
+          ></b>
+        </p>
+        <p style="text-align: left">
+          <b
+            ><span><b></b></span
+          ></b>
+        </p>
+        <p style="text-align: left"><span></span></p>
+        <p style="text-align: left">
+          <b
+            ><span><b></b></span
+          ></b>
+        </p>
+        <p></p>
+        <p></p>
+        <p style="text-align: left">
+          <b
+            ><span><b>4.2  交易争议处理</b></span></b
+          ><b
+            ><span><b></b></span
+          ></b>
+        </p>
+        <p style="text-align: left">
+          <b
+            ><span><b></b></span
+          ></b>
+        </p>
+        <p style="text-align: left">
+          <b
+            ><span
+              ><b><br /></b></span
+          ></b>
+        </p>
+        <p style="text-align: left">
+          <b
+            ><span><b>【交易争议处理途径】</b></span></b
+          ><span
+            >您在矩阵直播带货平台交易过程中与其他用户发生争议的，您或其他用户中任何一方均有权选择以下途径解决：</span
+          ><span></span>
+        </p>
+        <p style="text-align: left"><span></span></p>
+        <p style="text-align: left"><span></span></p>
+        <p style="text-align: left">
+          <!--[if !supportLists]--><span><span></span></span>
+        </p>
+        <p>（1）与争议相对方自主协商；</p>
+        <div>
+          （2）使用矩阵直播带货平台提供的争议调处服务；<br />（3）请求消费者协会或者其他依法成立的调解组织调解；<br />（4）向有关行政部门投诉；<br />（5）根据与争议相对方达成的仲裁协议（如有）提请仲裁机构仲裁；<br />（6）向人民法院提起诉讼。
+          <p style="text-align: left"><span></span><span></span></p>
+          <p style="text-align: left"><span></span><span></span></p>
+          <p style="text-align: left"><span></span><span></span></p>
+          <p style="text-align: left"><span></span><span></span></p>
+          <p><br /></p>
+          <p style="text-align: left">
+            <b
+              ><span><b>【平台调处服务】</b></span></b
+            ><span
+              >如您依据矩阵直播带货平台规则使用矩阵直播带货平台的争议调处服务，则表示您认可并愿意履行矩阵直播带货平台的客服作为独立的第三方根据其所了解到的争议事实并依据矩阵直播带货平台规则所作出的调处决定（包括调整相关订单的交易状态、判定将争议款项的全部或部分支付给交易一方或双方等）。在矩阵直播带货平台调处决定作出前，您可选择上述（3）、（4）、（5）、（6）途径（下称“其他争议处理途径”）解决争议以中止矩阵直播带货平台的争议调处服务。</span
+            ><span></span>
+          </p>
+          <p style="text-align: left">
+            <b
+              ><u
+                ><span
+                  ><b><br /></b></span></u
+            ></b>
+          </p>
+          <p style="text-align: left">
+            <b
+              ><u
+                ><span
+                  ><b
+                    >如您对调处决定不满意，您仍有权采取其他争议处理途径解决争议，但通过其他争议处理途径未取得终局决定前，您仍应先履行调处决定。</b
+                  ></span
+                ></u
+              ></b
+            ><b
+              ><u
+                ><span><b></b></span></u
+            ></b>
+          </p>
+          <p style="text-align: left">
+            <b
+              ><u
+                ><span
+                  ><b><br /></b></span></u
+            ></b>
+          </p>
+          <p style="text-align: left">
+            <b
+              ><u><span></span></u
+            ></b>
+          </p>
+          <p style="text-align: left">
+            <b
+              ><u
+                ><b
+                  ><span><b>4.3  责任限制</b></span></b
+                ><b
+                  ><span><b></b></span></b></u
+            ></b>
+          </p>
+          <p style="text-align: left">
+            <b
+              ><u
+                ><b
+                  ><span
+                    ><b><br /></b></span></b></u
+            ></b>
+          </p>
+          <p style="text-align: left">
+            <b
+              ><u
+                ><b
+                  ><span><b>【不可抗力及第三方原因】</b></span></b
+                ><b
+                  ><u
+                    ><span
+                      ><b
+                        >矩阵直播带货依照法律规定履行基础保障义务，但对于下述原因导致的合同履行障碍、履行瑕疵、履行延后或履行内容变更等情形，矩阵直播带货并不承担相应的违约责任：</b
+                      ></span
+                    ></u
+                  ></b
+                ><b
+                  ><u
+                    ><span><b></b></span></u></b></u
+            ></b>
+          </p>
+          <p style="text-align: left">
+            <b
+              ><u
+                ><b
+                  ><u
+                    ><span><b></b></span></u></b></u
+            ></b>
+          </p>
+          <p style="text-align: left">
+            <b
+              ><u
+                ><b
+                  ><u
+                    ><b
+                      ><b
+                        ><u
+                          ><span
+                            ><b
+                              >（1）因自然灾害、罢工、暴乱、战争、政府行为、司法行政命令等不可抗力因素；</b
+                            ></span
+                          ></u
+                        ></b
+                      ><b
+                        ><u
+                          ><span><b></b></span></u></b></b></u></b></u
+            ></b>
+          </p>
+          <p style="text-align: left">
+            <u
+              ><u
+                ><b
+                  ><b
+                    ><u><span></span></u></b></b></u
+            ></u>
+          </p>
+          <p style="text-align: left">
+            <u
+              ><u
+                ><b
+                  ><b
+                    ><u
+                      ><b
+                        ><u
+                          ><span
+                            ><b
+                              >（2）因电力供应故障、通讯网络故障等公共服务因素或第三方因素、用户因素；</b
+                            ></span
+                          ></u
+                        ></b
+                      ><b
+                        ><u
+                          ><span><b></b></span></u></b></u></b></b></u
+            ></u>
+          </p>
+          <p></p>
+          <p style="text-align: left">
+            <u
+              ><b
+                ><u
+                  ><span
+                    ><b
+                      >（3）在矩阵直播带货已尽善意管理的情况下，因常规或紧急的设备与系统维护、设备与系统故障、网络信息与数据安全等因素。</b
+                    ></span
+                  ></u
+                ></b
+              ><b
+                ><u
+                  ><span><b></b></span></u></b
+            ></u>
+          </p>
+          <p style="text-align: left">
+            <u
+              ><b
+                ><u
+                  ><span
+                    ><b><br /></b></span></u></b
+            ></u>
+          </p>
+          <p style="text-align: left">
+            <b
+              ><span><b>【调处决定】</b></span></b
+            ><span
+              >您理解并同意，在争议调处服务中，矩阵直播带货平台的客服并非专业人士，仅能以普通人的认知对用户提交的凭证进行判断。</span
+            ><b
+              ><u
+                ><span
+                  ><b
+                    >因此，除存在故意或重大过失外，调处方对争议调处决定免责。</b
+                  ></span
+                ></u
+              ></b
+            ><span></span>
+          </p>
+          <p style="text-align: left">
+            <b
+              ><span
+                ><b><br /></b></span
+            ></b>
+          </p>
+          <p style="text-align: left">
+            <b
+              ><span><b>【海量信息】</b></span></b
+            ><span
+              >矩阵直播带货仅向您提供矩阵直播带货平台服务，您了解矩阵直播带货平台上的信息系用户自行发布，且可能存在风险和瑕疵。矩阵直播带货将通过依法建立相关检查监控制度尽可能保障您在矩阵直播带货平台上的合法权益及良好体验。同时，</span
+            ><b
+              ><u
+                ><span
+                  ><b
+                    >鉴于矩阵直播带货平台具备存在海量信息及信息网络环境下信息与实物相分离的特点，矩阵直播带货无法逐一审查商品及/或服务的信息，无法逐一审查交易所涉及的商品及/或服务的质量、安全以及合法性、真实性、准确性，对此您应谨慎判断。除矩阵直播带货平台有明显过错外，对于</b
+                  ></span
+                ></u
+              ></b
+            ><b
+              ><u
+                ><span><b>因</b></span></u
+              ></b
+            ><b
+              ><u
+                ><span
+                  ><b>商品信息导致的纠纷，矩阵直播带货平台不承担任何责任。</b></span
+                ></u
+              ></b
+            ><span></span>
+          </p>
+          <p style="text-align: left">
+            <b
+              ><u
+                ><span
+                  ><b><br /></b></span></u
+            ></b>
+          </p>
+          <p style="text-align: left">
+            <b><b>【信息风险】</b></b
+            ><span
+              >在使用矩阵直播带货平台服务过程中，您可能会遇到网络信息或其他用户行为带来的风险，该等风险包含他人匿名或冒名的含有威胁、诽谤、令人反感、非法、误导、欺骗等任何信息或行为所造成任何心理、生理上的伤害或经济损失。请您仔细甄别，并在遇到上述相关不法行为时及时向矩阵直播带货平台或有关机关举报或投诉。矩阵直播带货平台将对相关内容开展日常检查并在收到举报或投诉时进行相应处理，但请您注意，</span
+            ><b
+              ><u
+                ><b
+                  >矩阵直播带货平台不对非矩阵直播带货平台所发出或刊登的任何信息的真实性、适用性、合法性承担责任，也不对因第三方侵权行为给您造成的损害负责。</b
+                ></u
+              ></b
+            ><br />
+          </p>
+          <p style="text-align: left">
+            <b
+              ><span
+                ><b><br /></b></span
+            ></b>
+          </p>
+          <p style="text-align: left">
+            <b
+              ><span><b>【非担保】</b></span></b
+            ><span>除非另有明确书面说明，在符合法律法规规定的情况下，</span
+            ><b
+              ><u
+                ><span
+                  ><b
+                    >矩阵直播带货不对矩阵直播带货平台上的信息、内容、材料、产品或服务做任何形式的明示或默示的声明或担保。</b
+                  ></span
+                ></u
+              ></b
+            ><span></span>
+          </p>
+          <p style="text-align: left">
+            <b
+              ><u
+                ><span
+                  ><b><br /></b></span></u
+            ></b>
+          </p>
+          <h3>
+            <b
+              ><u
+                ><b><b>5、用户信息的保护及授权</b></b></u
+              ></b
+            ><br />
+          </h3>
+          <p style="text-align: left">
+            <b
+              ><u
+                ><span><br /></span></u
+            ></b>
+          </p>
+          <p style="text-align: left">
+            <b
+              ><u
+                ><span>5.1</span
+                ><b
+                  ><span><b>【授权收集】</b></span></b
+                ><b
+                  ><u
+                    ><span
+                      ><b
+                        >在您使用矩阵直播带货提供的服务时，您同意矩阵直播带货收集、存储、使用、披露和保护您的个人信息（即能够独立或与其他信息结合后识别用户身份的信息，包括但不限于姓名、性别、生日、配送地址、联系方式、通讯录、相册、日历、定位信息等）。</b
+                      ></span
+                    ></u
+                  ></b
+                ><b
+                  ><u
+                    ><span><b></b></span></u></b></u
+            ></b>
+          </p>
+          <p style="text-align: left">
+            <b
+              ><u
+                ><b
+                  ><span
+                    ><b><br /></b></span></b></u
+            ></b>
+          </p>
+          <p style="text-align: left">
+            <b
+              ><u
+                ><b
+                  ><span><b>6、用户行为规范</b></span></b
+                ><b
+                  ><span><b></b></span></b></u
+            ></b>
+          </p>
+          <p style="text-align: left">
+            <b
+              ><u
+                ><span><br /></span></u
+            ></b>
+          </p>
+          <p style="text-align: left">
+            <span>6.1</span
+            ><b
+              ><span><b>【行为限制】</b></span></b
+            ><span
+              >您知悉并承诺，在使用矩阵直播带货所提供的服务的过程中，您应遵守相关法律法规，</span
+            ><b
+              ><u
+                ><span
+                  ><b
+                    >不应从事或协助、教唆他人从事违反法律法规的规定、影响正常服务提供或损害他人合法利益的行为，包括但不限于：</b
+                  ></span
+                ></u
+              ></b
+            >
+          </p>
+          <p style="text-align: left">
+            <b
+              ><u
+                ><b
+                  ><u><span></span></u></b></u
+            ></b>
+          </p>
+          <p style="text-align: left">
+            <b
+              ><u
+                ><b
+                  ><u><br /></u></b></u
+            ></b>
+          </p>
+          <p style="text-align: left">
+            <b
+              ><u
+                ><b
+                  ><u
+                    >（1）利用矩阵直播带货平台或相关服务从事违反国家法律法规禁止性规定的行为；<br /><br /></u></b></u
+            ></b>
+          </p>
+          <p style="text-align: left">
+            <b
+              ><u
+                ><b
+                  ><u
+                    >（2）因对矩阵直播带货平台相关服务的使用行为导致矩阵直播带货卷入政治和公共事件；<br /><br /></u></b></u
+            ></b>
+          </p>
+          <p style="text-align: left">
+            <b
+              ><u
+                ><b
+                  ><u
+                    >（3）入侵矩阵直播带货平台计算机信息系统，或从事危害计算机信息网络安全的活动；<br /><br /></u></b></u
+            ></b>
+          </p>
+          <p style="text-align: left">
+            <b
+              ><u
+                ><b
+                  ><u
+                    >（4）擅自复制和使用网络上未公开和未授权的文件。除相关著作权人明示同意，不应在网络中擅自破解、传播、下载或复制第三人享有著作权的软件或进行其他任何侵害他人知识产权的活动；<br /><br /></u></b></u
+            ></b>
+          </p>
+          <p style="text-align: left">
+            <b
+              ><u
+                ><b
+                  ><u
+                    >（5）盗取他人矩阵直播带货账户、银行账号等信息或盗取他人矩阵直播带货账户中的资产等；<br /><br /></u></b></u
+            ></b>
+          </p>
+          <p style="text-align: left">
+            <b
+              ><u
+                ><b
+                  ><u
+                    >（6）利用软件、技术手段、拆单或其他方式，为套取优惠、折扣、赠品、运费或其他利益而注册一个或多个矩阵直播带货账户、一人使用同一或多个矩阵直播带货账户，或合意他人使用同一或多个矩阵直播带货账户进行下单；<br /><br /></u></b></u
+            ></b>
+          </p>
+          <p style="text-align: left">
+            <b
+              ><u
+                ><b
+                  ><u
+                    >（7）一人或多人合意使用一个或多个矩阵直播带货账户实施不当行为，包括但不限于：购买商品或服务等数量超过正常生活消费需求，下单不支付、不完全支付或者选择延迟发货等方式违规占库存等；<br /><br /></u></b></u
+            ></b>
+          </p>
+          <p style="text-align: left">
+            <b
+              ><u
+                ><b
+                  ><u
+                    >（8）通过订单收货信息、订单备注、留言、评价等手段发送违规内容、广告或垃圾信息；<br /><br /></u></b></u
+            ></b>
+          </p>
+          <p style="text-align: left">
+            <b
+              ><u
+                ><b
+                  ><u
+                    >（9）虚假好评或以“刷单”等不正当方式帮助他人提升评价；<br /><br /></u></b></u
+            ></b>
+          </p>
+          <p style="text-align: left">
+            <b
+              ><u
+                ><b
+                  ><u
+                    >（10）滥用购买商品或服务、评价、申请退款、申请售后服务、发起投诉或索赔等权利，损害他人合法权益或妨害平台运营秩序，如：虚假下单、恶意代下单、刷单、恶意取消订单，发布无根据的恶意评价，多次恶意进行负面评价，利用评价权利对其他用户、商户实施威胁、敲诈勒索，利用矩阵直播带货、商家的过错或失误进行恶意索赔、恶意投诉，或者无故对矩阵直播带货、商家或客服人员进行辱骂、人身攻击；<br /><br /></u></b></u
+            ></b>
+          </p>
+          <p style="text-align: left">
+            <b
+              ><u
+                ><b
+                  ><u
+                    >（11）通过侵犯第三人合法权益、作弊、扰乱系统、实施网络攻击、恶意套现、刷信誉、批量注册、用机器注册矩阵直播带货平台账户、用机器模拟客户端、利用系统故障或漏洞等手段谋取利益、进行交易或参加矩阵直播带货平台或其所授权的第三方发布的任何活动（如：领取/兑换优惠券，进行抽奖，参与各类优惠活动等）；<br /><br /></u></b></u
+            ></b>
+          </p>
+          <p style="text-align: left">
+            <b
+              ><u
+                ><b
+                  ><u
+                    >（12）未经矩阵直播带货同意，利用注册的矩阵直播带货账户进行牟利性经营活动（如批发、炒货、转卖等）；<br /><br /></u></b></u
+            ></b>
+          </p>
+          <p style="text-align: left">
+            <b
+              ><u
+                ><b
+                  ><u
+                    >（13）非因商品或服务质量原因，短期内多次拒收商品或拒绝接受服务；<br /><br /></u></b></u
+            ></b>
+          </p>
+          <p style="text-align: left">
+            <b
+              ><u
+                ><b
+                  ><u
+                    >（14）购买正品商品，退货时退回非矩阵直播带货平台对应订单中销售的商品、以次充好、以假乱真等行为；<br /><br /></u></b></u
+            ></b>
+          </p>
+          <p style="text-align: left">
+            <b
+              ><u
+                ><b
+                  ><u
+                    >（15）商品或服务的供应商、代理商、销售商对其所供货或销售的商品、服务进行回购；<br /><br /></u></b></u
+            ></b>
+          </p>
+          <p style="text-align: left">
+            <b
+              ><u
+                ><b
+                  ><u
+                    >（16）其他干扰矩阵直播带货平台正常运转或正常交易秩序、违反公平或诚实信用原则的行为。<br /></u></b></u
+            ></b>
+          </p>
+          <p style="text-align: left">
+            <b
+              ><u
+                ><b
+                  ><u><br /></u></b></u
+            ></b>
+          </p>
+          <p style="text-align: left">
+            <b
+              ><u><b></b></u
+            ></b>
+          </p>
+          <p style="text-align: left">
+            <b
+              ><u
+                ><b
+                  ><span>6.2</span
+                  ><b
+                    ><span><b>【信息发布】</b></span></b
+                  ><b
+                    ><u
+                      ><span
+                        ><b
+                          >您应当遵守国家法律法规，不得在矩阵直播带货平台发布、转发或者传播含有下列内容的信息：</b
+                        ></span
+                      ></u
+                    ></b
+                  ><b
+                    ><u
+                      ><span><b></b></span></u></b></b></u
+            ></b>
+          </p>
+          <p style="text-align: left">
+            <u
+              ><b><br /></b
+            ></u>
+          </p>
+          <p style="text-align: left">
+            <u
+              ><b>（1）违反国家法律法规禁止性规定的； <br /><br /></b
+            ></u>
+          </p>
+          <p style="text-align: left">
+            <u
+              ><b
+                >（2）政治宣传、封建迷信、淫秽、色情、赌博、暴力、恐怖或者教唆犯罪的；<br /><br /></b
+            ></u>
+          </p>
+          <p style="text-align: left">
+            <u
+              ><b>（3）欺诈、虚假、不准确或存在误导性的；<br /><br /></b
+            ></u>
+          </p>
+          <p style="text-align: left">
+            <u
+              ><b
+                >（4）侵犯他人知识产权或涉及第三方商业秘密及其他专有权利的；<br /><br /></b
+            ></u>
+          </p>
+          <p style="text-align: left">
+            <u
+              ><b
+                >（5）侮辱、诽谤、恐吓、涉及他人隐私等侵害他人合法权益的；<br /><br /></b
+            ></u>
+          </p>
+          <p style="text-align: left">
+            <u
+              ><b
+                >（6）存在可能破坏、篡改、删除、影响矩阵直播带货平台任何系统正常运行或未经授权秘密获取矩阵直播带货平台及其他用户的数据、个人资料的病毒、木马、爬虫等恶意软件、程序代码的；<br /><br /></b
+            ></u>
+          </p>
+          <p style="text-align: left">
+            <u
+              ><b
+                >（7）其他违背社会公共利益或公共道德或依据相关矩阵直播带货平台协议、规则的规定不适合在矩阵直播带货平台上发布的。</b
+              ></u
+            >
+          </p>
+          <p style="text-align: left">
+            <u
+              ><b><br /></b
+            ></u>
+          </p>
+          <p style="text-align: left"><u></u></p>
+          <p style="text-align: left">
+            <u
+              ><b
+                ><span><b>6.3  软件使用及规范</b></span></b
+              ><b
+                ><span><b></b></span></b
+            ></u>
+          </p>
+          <p style="text-align: left">
+            <u
+              ><b
+                ><span
+                  ><b><br /></b></span></b
+            ></u>
+          </p>
+          <p style="text-align: left">
+            <u
+              ><b
+                ><span><b>【软件使用】</b></span></b
+              ><span
+                >如果您从未经矩阵直播带货授权的第三方获取软件或与该软件名称相同的安装程序，矩阵直播带货无法保证该软件能够正常使用，由此造成的相关损失，矩阵直播带货不予负责。</span
+              ><span></span
+            ></u>
+          </p>
+          <p style="text-align: left">
+            <u
+              ><span><br /></span
+            ></u>
+          </p>
+          <p style="text-align: left">
+            <u
+              ><span
+                >基于改善用户体验、修复漏洞、保障安全性等因素考虑，矩阵直播带货将不时对软件进行更新，新版本发布后，旧版本的软件可能无法使用，矩阵直播带货不保证旧版本软件继续可用，请您及时核对并下载最新版本。</span
+              ><span></span
+            ></u>
+          </p>
+          <p style="text-align: left">
+            <u
+              ><span><br /></span
+            ></u>
+          </p>
+          <p style="text-align: left"></p>
+          <p style="text-align: left">
+            <u
+              ><b
+                ><span><b>【软件使用禁止性规定】</b></span></b
+              ><span
+                >除非法律允许或矩阵直播带货书面许可，您使用矩阵直播带货平台过程中不得从事下列任一行为：</span
+              ><span></span
+            ></u>
+          </p>
+          <p style="text-align: left">
+            <u
+              ><span><br /></span
+            ></u>
+          </p>
+          <p style="text-align: left"></p>
+          <p style="text-align: left">
+            <u
+              >（1）删除、编辑或遮挡软件及其副本上关于著作权、商标或其他权利标识或标记的信息；<br /><br
+            /></u>
+          </p>
+          <p style="text-align: left">
+            <u
+              >（2）对软件进行反向工程、反向汇编、反向编译，或者以其他方式挖掘、提取软件的源代码；<br /><br
+            /></u>
+          </p>
+          <p style="text-align: left">
+            <u
+              >（3）对矩阵直播带货拥有知识产权的内容进行使用、出租、出借、出售、复制、修改、链接、转载、汇编、发表、出版、建立镜像站点等；<br /><br
+            /></u>
+          </p>
+          <p style="text-align: left">
+            <u
+              >（4）对软件或者软件运行过程中释放到任何终端内存中的数据、软件运行过程中客户端与服务器端的交互数据，以及软件运行所必需的系统数据，进行复制、修改、增加、删除、挂接运行或创作任何衍生作品，形式包括但不限于使用插件、外挂或非经矩阵直播带货授权的第三方工具/服务接入软件和相关系统；<br /><br
+            /></u>
+          </p>
+          <p style="text-align: left">
+            <u
+              >（5）通过修改或伪造软件运行中的指令、数据，增加、删减、变动软件的功能或运行效果，或者将用于上述用途的软件、方法进行运营或向公众传播，无论这些行为是否为商业目的；<br /><br
+            /></u>
+          </p>
+          <p style="text-align: left">
+            <u
+              >（6）通过非矩阵直播带货开发、授权的第三方软件、插件、外挂、系统，登录或使用矩阵直播带货平台及服务，或制作、发布、传播上述工具；<br /><br
+            /></u>
+          </p>
+          <p style="text-align: left">
+            <u
+              >（7）自行或者授权他人、第三方软件对本软件及其组件、模块、数据进行干扰。<br
+            /></u>
+          </p>
+          <p style="text-align: left">
+            <u><br /></u>
+          </p>
+          <h3>
+            <u
+              ><b
+                ><span><b>7、所有权及知识产权</b></span></b
+              ><b
+                ><span><b></b></span></b
+            ></u>
+          </h3>
+          <p style="text-align: left">
+            <u
+              ><span><br /></span
+            ></u>
+          </p>
+          <p style="text-align: left">
+            <u
+              ><span>7.1</span
+              ><b
+                ><span><b>【知识产权】</b></span></b
+              ><span
+                >您理解并知悉，除另有书面声明外，以下信息和内容的知识产权（包括但不限于专利权、著作权、商标权及商业秘密）归矩阵直播带货所有：</span
+              ><span></span
+            ></u>
+          </p>
+          <p style="text-align: left">
+            <u><span></span></u>
+          </p>
+          <p style="text-align: left">
+            <u
+              ><span><br /></span
+            ></u>
+          </p>
+          <p style="text-align: left">
+            <u
+              ><span
+                >（1）在矩阵直播带货平台相关服务中所提供的内容和信息（包括但不限于软件、技术、程序、网页、文字、图片、图像、地图、图标、音频、视频、图表、版面设计、电子文档、数据资料等）；</span
+              ><span></span
+            ></u>
+          </p>
+          <p style="text-align: left"></p>
+          <p style="text-align: left">
+            <u
+              ><span><br /></span
+            ></u>
+          </p>
+          <p style="text-align: left">
+            <u
+              ><span
+                >（2）矩阵直播带货用于提供上述内容和信息的基础设施和平台（包括但不限于软件、网站、应用程序等）；</span
+              ><span></span
+            ></u>
+          </p>
+          <p></p>
+          <p style="text-align: left">
+            <u
+              ><span><br /></span
+            ></u>
+          </p>
+          <p style="text-align: left">
+            <u
+              ><span
+                >（3）在矩阵直播带货提供相关服务中所使用的各项商标、商业形象、商业标识、技术诀窍、标语、文案等；</span
+              ><span></span
+            ></u>
+          </p>
+          <p style="text-align: left"></p>
+          <p style="text-align: left">
+            <u
+              ><span><br /></span
+            ></u>
+          </p>
+          <p style="text-align: left">
+            <u
+              ><span
+                >（4）矩阵直播带货平台服务的开发、运营、维护等过程中产生的所有数据和信息。</span
+              ><span></span
+            ></u>
+          </p>
+          <p style="text-align: left">
+            <u
+              ><span><br /></span
+            ></u>
+          </p>
+          <p></p>
+          <p style="text-align: left">
+            <u
+              ><b
+                ><u
+                  ><span
+                    ><b
+                      >矩阵直播带货所拥有的上述权利及所提供服务中所包含的任何内容的知识产权均受到法律保护，未经矩阵直播带货事先书面许可，您承诺不应且不应允许或协助任何人以任何形式（包括但不限于通过任何机器人、蜘蛛、截屏等程序或设备）进行使用、出租、出借、分发、展示、复制、修改、链接、转载、汇编、发表、出版、抓取、监视、引用或创造相关衍生作品。</b
+                    ></span
+                  ></u
+                ></b
+              ><b
+                ><u
+                  ><span><b></b></span></u></b
+            ></u>
+          </p>
+          <p style="text-align: left">
+            <u><br /></u>
+          </p>
+          <p style="text-align: left">
+            <u
+              ><span>7.2</span
+              ><b
+                ><span><b>【用户生成内容】</b></span></b
+              ><span
+                >您理解并同意，您在使用矩阵直播带货平台提供的服务时上传、提交、存储或发布的内容（包括但不限于文字、图片、视频、音频、动画等）均由您原创或已获合法授权，您的上传、提交、存储或发布行为不会侵犯他人的知识产权或其他合法权益。</span
+              ><span></span
+            ></u>
+          </p>
+          <p style="text-align: left">
+            <u
+              ><b
+                ><u
+                  ><span
+                    ><b><br /></b></span></u></b
+            ></u>
+          </p>
+          <p style="text-align: left">
+            <u
+              ><b
+                ><u
+                  ><span
+                    ><b
+                      >您同意，因您通过矩阵直播带货平台上传、发布的任何内容导致的知识产权侵权问题，您将承担全部责任；如矩阵直播带货及/或其关联公司因第三方知识产权维权而产生损失，您</b
+                    ></span
+                  ></u
+                ></b
+              ><b
+                ><u
+                  ><span><b>应全</b></span></u
+                ></b
+              ><b
+                ><u
+                  ><span><b>额赔偿。</b></span></u
+                ></b
+              ><b
+                ><u
+                  ><span><b></b></span></u></b
+            ></u>
+          </p>
+          <p style="text-align: left">
+            <u
+              ><b
+                ><u
+                  ><span
+                    ><b><br /></b></span></u></b
+            ></u>
+          </p>
+          <p style="text-align: left">
+            <u
+              ><b
+                ><u><span></span></u></b
+            ></u>
+          </p>
+          <p style="text-align: left">
+            <u
+              ><b
+                ><u><br /></u></b
+            ></u>
+          </p>
+          <p></p>
+          <p style="text-align: left">
+            <u><span></span><span></span></u>
+          </p>
+          <p></p>
+          <p></p>
+          <p></p>
+          <p></p>
+          <p></p>
+          <p></p>
+          <p style="text-align: left">
+            <span>7.3  您知悉、理解并同意，</span
+            ><b
+              ><u
+                ><span><b>您一旦接受本服务协议，即表明您主动将上述</b></span></u
+              ></b
+            ><b
+              ><u
+                ><span><b>用户生成</b></span></u
+              ></b
+            ><b
+              ><u
+                ><span
+                  ><b
+                    >内容的非专属、可转让的财产性权利，如著作权（包括但不限于：复制权、发行权、出租权、展览权、表演权、放映权、广播权、信息网络传播权、摄制权、改编权、翻译权、汇编权以及应当由著作权人享有的其他可转让权利），在全世界范围内永久、免费且不可撤销地授权给矩阵直播带货及其关联公司，矩阵直播带货及其关联公司可基于该等授权使用上述内容（包括但不限于用于商业用途）或向第三方自主进行任何必要的转授权。</b
+                  ></span
+                ></u
+              ></b
+            ><b
+              ><u
+                ><span><b>如该等内容并非您原创，则您承诺</b></span></u
+              ></b
+            ><b
+              ><u
+                ><span><b>您</b></span></u
+              ></b
+            ><b
+              ><u
+                ><span
+                  ><b>已获得合法授权对矩阵直播带货及其关联公司进行前述授权</b></span
+                ></u
+              ></b
+            ><b
+              ><u
+                ><span
+                  ><b
+                    >。该等授权、转授权的使用场景包括但不限于当前或其他任何网站、应用程序、产品或移动终端设备等，且矩阵直播带货及其关联公司或矩阵直播带货及其关联公司所授权许可的第三方可通过对上述授权内容进行修改、复制、改编、翻译、汇编或制作，形成衍生产品。在不违反相关法律法规的强制性规定、尊重相关原始授权内容的知识产权的基础上，该等衍生产品的相关知识产权归矩阵直播带货及其关联公司或矩阵直播带货所授权许可的第三方所有。</b
+                  ></span
+                ></u
+              ></b
+            ><b
+              ><u
+                ><span><b></b></span></u
+            ></b>
+          </p>
+          <p style="text-align: left">
+            <span><br /></span>
+          </p>
+          <p style="text-align: left">
+            <span
+              >您确认并同意授权矩阵直播带货及其关联公司以自己的名义或委托专业第三方针对有关您上传、提交、存储或发布的内容（含衍生作品）的侵权行为进行独立自主的维权并获得全部赔偿。维权形式包括但不限于：监测侵权行为、发送维权函、提起诉讼或仲裁、调解、和解等。矩阵直播带货及其关联公司有权对维权事宜做出独立决策并予以实施。</span
+            ><span></span>
+          </p>
+          <p style="text-align: left">
+            <span><br /></span>
+          </p>
+          <p style="text-align: left"></p>
+          <p style="text-align: left">
+            <b
+              ><span><b></b></span
+            ></b>
+          </p>
+          <h3>
+            <b
+              ><span><b>8、用户的违约及处理</b></span></b
+            ><b
+              ><span><b></b></span
+            ></b>
+          </h3>
+          <p style="text-align: left">
+            <span><br /></span>
+          </p>
+          <p style="text-align: left">
+            <span>8.1</span
+            ><b
+              ><span><b>【违约认定】</b></span></b
+            ><b
+              ><u
+                ><span><b>发生如下情形之一的，视为您违约：</b></span></u
+              ></b
+            ><b
+              ><u
+                ><span><b></b></span></u
+            ></b>
+          </p>
+          <p style="text-align: left">
+            <b
+              ><u
+                ><span
+                  ><b><br /></b></span></u
+            ></b>
+          </p>
+          <p style="text-align: left">
+            <b
+              ><u
+                ><span
+                  ><b
+                    >（1）使用矩阵直播带货平台服务时违反有关法律法规规定的；</b
+                  ></span
+                ></u
+              ></b
+            ><b
+              ><u
+                ><span><b></b></span></u
+            ></b>
+          </p>
+          <p style="text-align: left">
+            <b
+              ><u
+                ><span
+                  ><b><br /></b></span></u
+            ></b>
+          </p>
+          <p style="text-align: left">
+            <b
+              ><u
+                ><span
+                  ><b
+                    >（2）违反本协议或本协议补充协议（即本协议第2.1条）约定的。</b
+                  ></span
+                ></u
+              ></b
+            ><b
+              ><u
+                ><span><b></b></span></u
+            ></b>
+          </p>
+          <p style="text-align: left">
+            <b
+              ><u
+                ><span
+                  ><b><br /></b></span></u
+            ></b>
+          </p>
+          <p style="text-align: left">
+            <b
+              ><u
+                ><span
+                  ><b
+                    >为适应电子商务发展和满足海量用户对高效优质服务的需求，您理解并同意，矩阵直播带货可在矩阵直播带货平台规则中约定违约认定的程序和标准。如：矩阵直播带货可依据您的用户数据与海量用户数据的关系来认定您是否构成违约；您有义务对您的数据异常现象进行充分举证和合理解释，否则将被认定为违约。</b
+                  ></span
+                ></u
+              ></b
+            ><b
+              ><u
+                ><span><b></b></span></u
+            ></b>
+          </p>
+          <p style="text-align: left"><br /></p>
+          <p style="text-align: left">
+            <b
+              ><u
+                ><span><b></b></span></u></b
+            ><b
+              ><u
+                ><span><b></b></span></u
+            ></b>
+          </p>
+          <p style="text-align: left">
+            <b
+              ><u
+                ><span><b></b></span></u
+            ></b>
+          </p>
+          <p></p>
+          <p style="text-align: left">
+            <b
+              ><span><b>8.2  违约处理措施</b></span></b
+            ><b
+              ><span><b></b></span
+            ></b>
+          </p>
+          <p style="text-align: left">
+            <b
+              ><span
+                ><b><br /></b></span
+            ></b>
+          </p>
+          <p style="text-align: left">
+            <b
+              ><span><b>【信息处理】</b></span></b
+            ><span>您在矩阵直播带货平台上发布的信息构成违约的，</span
+            ><b
+              ><u
+                ><span
+                  ><b
+                    >矩阵直播带货可立即对相应信息进行删除、屏蔽处理，而无需另行通知您。</b
+                  ></span
+                ></u
+              ></b
+            ><span></span>
+          </p>
+          <p style="text-align: left">
+            <b
+              ><span
+                ><b><br /></b></span
+            ></b>
+          </p>
+          <p style="text-align: left">
+            <b
+              ><span><b>【行为限制】</b></span></b
+            ><span>您在矩阵直播带货平台上实施的行为，</span
+            ><b
+              ><u
+                ><span
+                  ><b
+                    >或虽未在矩阵直播带货平台上实施但对矩阵直播带货平台及其用户产生影响的行为构成违约的，矩阵直播带货有权做出独立判断并采取暂停提供部分或全部服务、取消订单、停止发货、对已发货的订单进行拦截追回、扣除账户内优惠券等虚拟产品、冻结账户内余额、查封或注销账户、终止提供服务等措施，且无需因此对您进行任何赔偿或补偿。</b
+                  ></span
+                ></u
+              ></b
+            ><span></span>
+          </p>
+          <p style="text-align: left">
+            <b
+              ><span
+                ><b><br /></b></span
+            ></b>
+          </p>
+          <p style="text-align: left">
+            <b
+              ><span><b>【证据记录】</b></span></b
+            ><span
+              >您须对自己在矩阵直播带货平台的言论和行为承担法律责任，若您违反国家法律法规的规定，矩阵直播带货平台的系统记录有可能作为您违反法律法规的证据，矩阵直播带货平台有权向行政、司法机关提供上述证据记录等相关信息。</span
+            ><span></span>
+          </p>
+          <p style="text-align: left">
+            <b
+              ><span
+                ><b><br /></b></span
+            ></b>
+          </p>
+          <p style="text-align: left">
+            <b
+              ><span><b>【处理结果公示】</b></span></b
+            ><span
+              >矩阵直播带货可将对您上述违约行为处理措施信息以及其他经国家行政或司法机关生效法律文书确认的违法信息在矩阵直播带货平台上予以公示，但涉及个人信息的部分将被去标识化。</span
+            ><span></span>
+          </p>
+          <p style="text-align: left">
+            <span><br /></span>
+          </p>
+          <p style="text-align: left"></p>
+          <p style="text-align: left">
+            <b
+              ><span><b>8.3  赔偿责任</b></span></b
+            ><b
+              ><span><b></b></span
+            ></b>
+          </p>
+          <p style="text-align: left">
+            <b
+              ><u
+                ><span
+                  ><b><br /></b></span></u
+            ></b>
+          </p>
+          <p style="text-align: left">
+            <b
+              ><u
+                ><span
+                  ><b
+                    >如您的行为使矩阵直播带货及/或其关联公司遭受损失（包括自身的直接经济损失、商誉损失及对外支付的赔偿金、和解款、律师费、诉讼费等间接经济损失），您应赔偿矩阵直播带货及/或其关联公司的上述全部损失。</b
+                  ></span
+                ></u
+              ></b
+            ><b
+              ><u
+                ><span><b></b></span></u
+            ></b>
+          </p>
+          <p style="text-align: left">
+            <b
+              ><u
+                ><span
+                  ><b><br /></b></span></u
+            ></b>
+          </p>
+          <p style="text-align: left">
+            <b
+              ><u
+                ><span
+                  ><b
+                    >如您的行为使矩阵直播带货及/或其关联公司遭受第三人主张权利，矩阵直播带货及/或其关联公司可在对第三人承担金钱给付等义务后就全部损失向您追偿。</b
+                  ></span
+                ></u
+              ></b
+            ><b
+              ><u
+                ><span><b></b></span></u
+            ></b>
+          </p>
+          <p style="text-align: left">
+            <b
+              ><u
+                ><span
+                  ><b><br /></b></span></u
+            ></b>
+          </p>
+          <p style="text-align: left">
+            <b
+              ><u
+                ><span
+                  ><b
+                    >如因您的行为使得第三人遭受损失或您怠于履行调处决定，矩阵直播带货及/或其关联公司出于社会公共利益保护或消费者权益保护目的，可使用自有资金代您支付上述款项，您应当返还该部分费用并赔偿因此造成矩阵直播带货的全部损失。矩阵直播带货及/或关联公司也可直接抵减您在矩阵直播带货及/或其关联公司其它协议项下的权益，并可继续追偿。</b
+                  ></span
+                ></u
+              ></b
+            ><b
+              ><u
+                ><span><b></b></span></u
+            ></b>
+          </p>
+          <p style="text-align: left"><br /></p>
+          <p></p>
+          <h3>
+            <b
+              ><span><b>9、通知</b></span></b
+            ><b
+              ><span><b></b></span
+            ></b>
+          </h3>
+          <p style="text-align: left">
+            <b
+              ><span
+                ><b><br /></b></span
+            ></b>
+          </p>
+          <p style="text-align: left">
+            <b
+              ><span><b>9.1  有效联系方式</b></span></b
+            ><b
+              ><span><b></b></span
+            ></b>
+          </p>
+          <p style="text-align: left">
+            <span><br /></span>
+          </p>
+          <p style="text-align: left">
+            <span
+              >您在注册成为矩阵直播带货平台用户，并接受矩阵直播带货平台服务时，您应该向矩阵直播带货提供真实有效的联系方式（包括您的联系电话、联系地址等），对于联系方式发生变更的，您有义务及时更新有关信息，并保持可被联系的状态。</span
+            ><span></span>
+          </p>
+          <p style="text-align: left">
+            <span><br /></span>
+          </p>
+          <p style="text-align: left">
+            <span
+              >您在注册成为矩阵直播带货平台用户时生成的用于登陆矩阵直播带货平台接收站内信和系统消息的账户，也作为您的有效联系方式。</span
+            ><span></span>
+          </p>
+          <p style="text-align: left">
+            <span><br /></span>
+          </p>
+          <p style="text-align: left">
+            <span
+              >矩阵直播带货将通过您的上述联系方式的其中之一或其中若干向您送达各类通知，而此类通知的内容可能对您的权利义务产生重大的有利或不利影响，请您务必及时关注。</span
+            ><span></span>
+          </p>
+          <p style="text-align: left">
+            <span><br /></span>
+          </p>
+          <p style="text-align: left">
+            <span
+              >您有权通过您注册时填写的手机号码或者电子邮箱获取您感兴趣的商品广告信息、促销优惠等商业性信息；您如果不愿意接收此类信息，您有权通过甲方提供的相应的退订功能进行退订。您理解并同意，对上述的相关广告信息，您应审慎判断其真实性和可靠性，除法律法规明确规定外，您应对依该广告信息进行的交易负责。</span
+            ><span></span>
+          </p>
+          <p style="text-align: left">
+            <span><br /></span>
+          </p>
+          <p style="text-align: left"></p>
+          <p style="text-align: left">
+            <b
+              ><span><b>9.2  通知的送达</b></span></b
+            ><b
+              ><span><b></b></span
+            ></b>
+          </p>
+          <p style="text-align: left">
+            <span><br /></span>
+          </p>
+          <p style="text-align: left">
+            <span
+              >矩阵直播带货通过上述联系方式向您发出通知，其中以电子的方式发出的书面通知，包括但不限于在矩阵直播带货平台显著位置刊登电子信息，向您提供的联系电话发送手机短信，向您提供的电子邮件地址发送电子邮件，向您的账户发送系统消息或站内信信息，在发送成功或刊登完成后即视为送达；以纸质载体发出的书面通知，按照提供联系地址交邮后的第五个自然日即视为送达。</span
+            ><span></span>
+          </p>
+          <p style="text-align: left">
+            <span><br /></span>
+          </p>
+          <p style="text-align: left">
+            <span
+              >上述送达方式同样可适用于相关仲裁或司法程序（含起诉、审理、执行等各阶段）。</span
+            ><span></span>
+          </p>
+          <p style="text-align: left">
+            <span><br /></span>
+          </p>
+          <p style="text-align: left">
+            <span
+              >您应当保证所提供的联系方式是准确、有效的，并进行实时更新。如果因提供的联系方式不确切，或不及时告知变更后的联系方式，或其他不可归责于矩阵直播带货的原因，使相关通知、文件、法律文书无法送达或未及时送达，由您自行承担由此可能产生的法律后果。</span
+            ><span></span>
+          </p>
+          <p style="text-align: left">
+            <span><br /></span>
+          </p>
+          <p style="text-align: left"></p>
+          <h3>
+            <b
+              ><span><b>10、协议的终止</b></span></b
+            ><b
+              ><span><b></b></span
+            ></b>
+          </h3>
+          <p style="text-align: left">
+            <b
+              ><span
+                ><b><br /></b></span
+            ></b>
+          </p>
+          <p style="text-align: left">
+            <b
+              ><span><b>10.1  终止的情形</b></span></b
+            ><b
+              ><span><b></b></span
+            ></b>
+          </p>
+          <p style="text-align: left">
+            <b
+              ><span
+                ><b><br /></b></span
+            ></b>
+          </p>
+          <p style="text-align: left">
+            <b
+              ><span><b>【用户发起的终止】</b></span></b
+            ><span>您有权通过以下任一方式终止本协议：</span><span></span>
+          </p>
+          <p></p>
+          <p style="text-align: left">
+            <span><br /></span>
+          </p>
+          <p style="text-align: left">
+            <span
+              >（一）您通过自助服务注销您的账户的（此种情况下，您理解并同意，您已认真阅读、认可矩阵直播带货平台关于账户注销的相关约定，并已了解、同意相关用户注销流程及注销后的权利义务安排）；</span
+            ><span></span>
+          </p>
+          <p style="text-align: left">
+            <span><br /></span>
+          </p>
+          <p style="text-align: left">
+            <span>（二）变更事项生效前您停止使用矩阵直播带货服务并</span
+            ><span>持续不再使用</span><span>的；</span><span></span>
+          </p>
+          <p style="text-align: left">
+            <span><br /></span>
+          </p>
+          <p style="text-align: left">
+            <span
+              >（三）您明示不愿继续使用矩阵直播带货服务，且符合矩阵直播带货平台终止条件的。</span
+            ><span></span>
+          </p>
+          <p style="text-align: left">
+            <b
+              ><span
+                ><b><br /></b></span
+            ></b>
+          </p>
+          <p style="text-align: left">
+            <b
+              ><span><b>【矩阵直播带货发起的终止】</b></span></b
+            ><span>出现以下情况时，</span
+            ><b
+              ><u
+                ><span
+                  ><b
+                    >矩阵直播带货可以本协议第9条的所列的方式通知您终止本协议：</b
+                  ></span
+                ></u
+              ></b
+            ><b
+              ><u
+                ><span><b></b></span></u
+            ></b>
+          </p>
+          <p style="text-align: left">
+            <b
+              ><u
+                ><span
+                  ><b><br /></b></span></u
+            ></b>
+          </p>
+          <p style="text-align: left">
+            <b
+              ><u
+                ><span
+                  ><b
+                    >（1）您违反本协议约定，矩阵直播带货依据违约条款终止本协议的；</b
+                  ></span
+                ></u
+              ></b
+            ><b
+              ><u
+                ><span><b></b></span></u
+            ></b>
+          </p>
+          <p style="text-align: left">
+            <b
+              ><u><span></span></u
+            ></b>
+          </p>
+          <p style="text-align: left">
+            <b
+              ><u
+                ><b
+                  ><u
+                    ><span
+                      ><b><br /></b></span></u></b></u
+            ></b>
+          </p>
+          <p style="text-align: left">
+            <b
+              ><u
+                ><b
+                  ><u
+                    ><span
+                      ><b
+                        >（2）您存在盗用他人账户、发布违禁信息、骗取他人财物、扰乱市场秩序、采取不正当手段谋利、侵犯他人合法权益等行为，矩阵直播带货依据矩阵直播带货平台规则对您的账户予以查封的；</b
+                      ></span
+                    ></u
+                  ></b
+                ><b
+                  ><u
+                    ><span><b></b></span></u></b></u
+            ></b>
+          </p>
+          <p></p>
+          <p style="text-align: left">
+            <b
+              ><u
+                ><span
+                  ><b><br /></b></span></u
+            ></b>
+          </p>
+          <p style="text-align: left">
+            <b
+              ><u
+                ><span
+                  ><b
+                    >（3）除上述情形外，因您多次违反矩阵直播带货平台规则相关规定且情节严重，矩阵直播带货依据矩阵直播带货平台规则对您的账户予以查封的；</b
+                  ></span
+                ></u
+              ></b
+            ><b
+              ><u
+                ><span><b></b></span></u
+            ></b>
+          </p>
+          <p style="text-align: left">
+            <b
+              ><u><span></span></u
+            ></b>
+          </p>
+          <p>
+            <b
+              ><u
+                ><b
+                  ><u
+                    ><span
+                      ><b><br /></b></span></u></b></u
+            ></b>
+          </p>
+          <p>
+            <b
+              ><u
+                ><b
+                  ><u
+                    ><span
+                      ><b
+                        >（4）矩阵直播带货平台根据自身商业安排经过合理的提前通知终止全部矩阵直播带货平台服务的；</b
+                      ></span
+                    ></u
+                  ></b
+                ></u
+              ></b
+            >
+          </p>
+          <p></p>
+          <p style="text-align: left">
+            <b
+              ><u
+                ><span
+                  ><b><br /></b></span></u
+            ></b>
+          </p>
+          <p style="text-align: left">
+            <b
+              ><u
+                ><span><b>（5）其它应当终止服务的情况。</b></span></u
+              ></b
+            ><b
+              ><u
+                ><span><b></b></span></u
+            ></b>
+          </p>
+          <p style="text-align: left"><br /></p>
+          <p style="text-align: left">
+            <b
+              ><span><b></b></span
+            ></b>
+          </p>
+          <p></p>
+          <p style="text-align: left">
+            <b
+              ><span><b>10.2  协议终止后的处理</b></span></b
+            ><b
+              ><span><b></b></span
+            ></b>
+          </p>
+          <p style="text-align: left">
+            <b
+              ><span
+                ><b><br /></b></span
+            ></b>
+          </p>
+          <p style="text-align: left">
+            <b
+              ><span><b>【服务终止】</b></span></b
+            ><span
+              >本协议终止后，矩阵直播带货平台将无法继续向您提供任何服务或履行任何其他义务，包括但不限于为您保留或向您披露原矩阵直播带货账户中的任何信息，向您或第三方转发任何未曾阅读或发送过的信息等。</span
+            ><span></span>
+          </p>
+          <p style="text-align: left">
+            <b
+              ><span
+                ><b><br /></b></span
+            ></b>
+          </p>
+          <p style="text-align: left">
+            <b
+              ><span><b>【用户信息披露】</b></span></b
+            ><span
+              >本协议终止后，除法律有明确规定外，矩阵直播带货无义务向您或您指定的第三方披露您账户中的任何信息。</span
+            ><span></span>
+          </p>
+          <p style="text-align: left">
+            <b
+              ><span
+                ><b><br /></b></span
+            ></b>
+          </p>
+          <p style="text-align: left">
+            <b
+              ><span><b>【矩阵直播带货权利】</b></span></b
+            ><span>本协议终止后，矩阵直播带货仍享有下列权利：</span><span></span>
+          </p>
+          <p style="text-align: left"></p>
+          <p style="text-align: left">
+            <span><br /></span>
+          </p>
+          <p style="text-align: left">
+            <span>（一）</span
+            ><b
+              ><u
+                ><span><b>根据本协议及</b></span></u
+              ></b
+            ><b
+              ><u
+                ><span><b>矩阵直播带货平台</b></span></u
+              ></b
+            ><b
+              ><u
+                ><span><b>《隐私</b></span></u
+              ></b
+            ><b
+              ><u
+                ><span><b>权</b></span></u
+              ></b
+            ><b
+              ><u
+                ><span
+                  ><b
+                    >政策》的相关约定，继续保存您留存于矩阵直播带货平台的各类信息；</b
+                  ></span
+                ></u
+              ></b
+            ><b
+              ><u
+                ><span><b></b></span></u
+            ></b>
+          </p>
+          <p></p>
+          <p style="text-align: left">
+            <span><br /></span>
+          </p>
+          <p style="text-align: left">
+            <span>（二）</span
+            ><b
+              ><u
+                ><span
+                  ><b
+                    >对于您过往的违约行为，矩阵直播带货仍可依据本协议向您追究违约责任。</b
+                  ></span
+                ></u
+              ></b
+            ><b
+              ><u
+                ><span><b></b></span></u
+            ></b>
+          </p>
+          <p style="text-align: left">
+            <b
+              ><span
+                ><b><br /></b></span
+            ></b>
+          </p>
+          <p style="text-align: left">
+            <b
+              ><span><b>【交易处理】</b></span></b
+            ><span
+              >本协议终止后，对于您在本协议存续期间产生的交易订单，矩阵直播带货可通知交易相对方并根据交易相对方的意愿决定是否关闭该等交易订单；如交易相对方要求继续履行的，则您应当就该等交易订单继续履行本协议及交易订单的约定，并承担因此产生的任何损失或增加的任何费用。</span
+            ><span></span>
+          </p>
+          <p style="text-align: left">
+            <span><br /></span>
+          </p>
+          <p style="text-align: left"></p>
+          <h3>
+            <b
+              ><span><b>11、法律适用与管辖</b></span></b
+            ><b
+              ><span><b></b></span
+            ></b>
+          </h3>
+          <p style="text-align: left">
+            <span><br /></span>
+          </p>
+          <p style="text-align: left">
+            <span>11.1 </span
+            ><b
+              ><span><b>【法律适用】</b></span></b
+            ><span
+              >本协议之订立、生效、解释、修订、补充、终止、执行与争议解决均适用中华人民共和国大陆地区法律；如法律无相关规定的，参照商业惯例及/或行业惯例。</span
+            ><span></span>
+          </p>
+          <p style="text-align: left">
+            <span><br /></span>
+          </p>
+          <p style="text-align: left">
+            <span>11.2 </span
+            ><b
+              ><span><b>【管辖】</b></span></b
+            ><span
+              >您因使用矩阵直播带货平台服务所产生及与矩阵直播带货平台服务有关的争议，由矩阵直播带货与您协商解决。</span
+            ><b
+              ><u
+                ><span><b>协商不成时，任何一方均可向</b></span></u
+              ></b
+            ><b
+              ><u
+                ><span><b>矩阵直播带货所在</b></span></u
+              ></b
+            ><b
+              ><u
+                ><span><b>地有管辖权的人民法院提起诉讼。</b></span></u
+              ></b
+            ><b
+              ><u
+                ><span><b>矩阵直播带货所在</b></span></u
+              ></b
+            ><b
+              ><u
+                ><span><b>地为广东省广州市</b></span></u
+              ></b
+            ><b
+              ><u
+                ><span><b>天河</b></span></u
+              ></b
+            ><b
+              ><u
+                ><span><b>区。</b></span></u
+              ></b
+            ><span></span>
+          </p>
+          <p style="text-align: left">
+            <b
+              ><span
+                ><b><br /></b></span
+            ></b>
+          </p>
+          <h3>
+            <b
+              ><span><b>12、其他</b></span></b
+            ><b
+              ><span><b></b></span
+            ></b>
+          </h3>
+          <p style="text-align: left">
+            <span><br /></span>
+          </p>
+          <p style="text-align: left">
+            <span>12.1 </span
+            ><b
+              ><span><b>【可分性】</b></span></b
+            ><span
+              >本协议任一条款被视为废止、无效或不可执行，该条应视为可分的且并不影响本协议其余条款的有效性及可执行性。</span
+            ><span></span>
+          </p>
+          <p style="text-align: left">
+            <span><br /></span>
+          </p>
+          <p style="text-align: left">
+            <span
+              >12.2
+              <b>【权利保留】</b
+              >本协议未明示授权的其他权利仍由矩阵直播带货保留，您在行使这些权利时须另外取得矩阵直播带货的书面许可。矩阵直播带货如果未行使前述任何权利，并不构成对该权利的放弃。</span
+            ><span></span>
+          </p>
+          <p style="text-align: left">
+            <span><br /></span>
+          </p>
+          <p style="text-align: left">
+            <span>12.3 </span
+            ><b
+              ><span><b>【索引关键词】</b></span></b
+            ><span
+              >本协议各条款前所列索引关键词仅为帮助您理解该条款表达的主旨之用，不影响或限制本协议条款的含义或解释。为维护您自身权益，建议您仔细阅读各条款具体表述。</span
+            ><span></span>
+          </p>
+          <p style="text-align: left">
+            <span><br /></span>
+          </p>
+          <p style="text-align: left">
+            <span>12.4 </span
+            ><b
+              ><span><b>【再次提示】</b></span></b
+            ><span
+              >本协议内容中以加粗方式显著标识的条款，请您着重阅读。您点击确认同意即视为您完全接受本协议，在点击之前请您再次确认已知悉并完全理解本协议的全部内容。</span
+            ><span></span>
+          </p>
+          <p></p>
+          <p></p>
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript" src="js/min.js"></script>
+    <script src="js/bottombar.js"></script>
+    <script>
+      $(function () {
+        if (lib.env.app.isWeixin && !checkPartnerLogin()) {
+          return;
+        }
+        var isPC = !lib.env.os.isAndroid && !lib.env.os.isIOS;
+        if (isPC) {
+          $(".wrapper").css({
+            "max-width": "640px",
+            overflow: "hidden",
+            margin: "0 auto",
+          });
+        }
+        $("body").on("click", "a", function (e) {
+          var $self = $(this);
+          var href = $self[0].href;
+          var url = "";
+          if (href) {
+            var lowerHref = href.toLowerCase();
+            if (
+              lowerHref.indexOf("javascript") == -1 &&
+              lowerHref.indexOf("tel:") == -1
+            ) {
+              url = href;
+            }
+          }
+          if (
+            url &&
+            url.indexOf("need_check_wap") != -1 &&
+            lib.env.app.isMockuai &&
+            lib.env.app.serverVersion == "-1"
+          ) {
+            e.preventDefault();
+            var httpurl = new lib.httpurl(url);
+            httpurl.params["isForceWap"] = "true";
+            location.href = httpurl.toString();
+          }
+          if (url && url.indexOf("https://act.feed.9t2.net") != -1) {
+            url = url.replace(/^http:\/\//i, "https://");
+            location.href = url;
+          }
+        });
+        if (location.host == "ushop.huodong.feed.9t2.net") {
+          new lib.ushopBottomBar();
+        }
+        var httpUrl = new lib.httpurl(location.href);
+        var params = httpUrl.params;
+        var hoverIndex = params["hoverIndex"];
+        var app_key = params["ak"];
+        var app_pwd = params["ap"];
+        if (hoverIndex) {
+          getBottomData(function (data) {
+            renderBottom(data.data.biz_info);
+          });
+        }
+        function getBottomData(cb) {
+          lib.api.init({ app_key: app_key, app_pwd: app_pwd });
+          lib.api.get({
+            api: "auth/session_token/get",
+            success: function (data) {
+              cb && cb(data);
+            },
+          });
+        }
+        function renderBottom(data) {
+          var tab_list = null,
+            bgColor = "#fff";
+          if (data && data.navigation_bar && data.navigation_bar.valid) {
+            tab_list = data.navigation_bar.tab_list;
+            bgColor = data.navigation_bar.color;
+          }
+          new ctrl.bottomBar({
+            hoverIndex: hoverIndex,
+            showBottom: true,
+            color: "#E85352",
+            bgColor: bgColor,
+            barData: tab_list,
+          });
+        }
+        function checkPartnerLogin() {
+          var httpUrl = new lib.httpurl(location.href);
+          var params = httpUrl.params;
+          var partner_code = params["partner_code"] || "";
+          if (partner_code && !lib.login.isLogin()) {
+            lib.login.goLogin();
+            return false;
+          }
+          return true;
+        }
+      });
+    </script>
+    <script type="text/javascript"></script>
+  </body>
+</html>

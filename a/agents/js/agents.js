@@ -17,7 +17,7 @@
                     var htmls = '';
                     $.ajax({
                         type: "get",//请求方式
-                        url: "/wp-content/themes/mockuai/json/regions.json",//请求数据来源
+                        url: "../../json/regions.json",//请求数据来源
                         dataType: "json",//格式
                         success: function (res) {
                             var list = res; //console.log(list)
@@ -132,9 +132,10 @@
                 toastError("请选择具体城市信息");
                 return;
             }
+
             $.ajax({
                 type: "post",//请求方式
-                url: "https://api.mockuai.com/ec/b/boss/agency/add",//请求数据来源
+                url: "../../php/agency_add.php",//请求数据来源
                 dataType: "json",//格式
                 data: {
                     app_key: "7ff47887933bece366de5259b1e20a25",
@@ -184,14 +185,15 @@
             }
             $.ajax({
                 type: "get",//请求方式
-                url: "https://api.mockuai.com/ec/o/boss/toolbiz/agent/query/homepage",//请求数据来源
+                url: "../../php/agency_search.php",//请求数据来源
                 dataType: "json",//格式
                 data: {
                     company_name: $(".search__input").val(),
                     app_key: "7ff47887933bece366de5259b1e20a25",
                 },
                 success: (res) => {
-                    if (res.code === 10000 && res.data.data && res.data.data.length) {
+                    //if (res.code === 10000 && res.data.data && res.data.data.length) {
+                    if (res.code === 10000){
                         toastInfo($(".search__input").val() + "是矩阵官方授权代理商");
                         return;
                     }

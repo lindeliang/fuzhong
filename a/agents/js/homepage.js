@@ -181,7 +181,7 @@
       $("#image-open-immediately").css("display", "flex");
     });
     $(".btn-in-supplier").click(function () {
-      window.open('https://www.mockuai.com/supplier-form');
+      window.open('https://feed.9t2.net/supplier-form');
       // window.open("https://jinshuju.net/f/MIdHvM");
       // $(".homepage__mask").css("display", "flex");
       // $("#image-in-supplier").css("display", "flex");

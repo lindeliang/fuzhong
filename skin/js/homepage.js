@@ -180,6 +180,7 @@
       $(".homepage__mask").css("display", "flex");
       $("#image-open-immediately").css("display", "flex");
     });
+    
     $(".btn-in-supplier").click(function () {
       window.open('a/supplier-form/index.html');
       // window.open("https://jinshuju.net/f/MIdHvM");

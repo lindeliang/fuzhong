@@ -54,7 +54,7 @@
         var marker = new AMap.Marker({
             position: new AMap.LngLat(113.4131, 23.1731),   // 经纬度对象，也可以是经纬度构成的一维数组[116.39, 39.9]
             title: '矩阵科技',
-            icon: '//img.mockuai.com/tms/2019/9/16/upload_775c7c67f56c7f84784c134c5d43a3dd.png',
+            icon: '//img.feed.9t2.net/tms/2019/9/16/upload_775c7c67f56c7f84784c134c5d43a3dd.png',
             offset: new AMap.Pixel(-18, -46)
         });
         map.add(marker);

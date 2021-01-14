@@ -1,0 +1,51 @@
+{
+    "header": [
+        " *   ",
+        " *   文件描述：本文件为请求参数，包括不限于网址、请求头、响应头、COOKIE、Referer、UserAgent",
+        " *   本文件仅为记录详细请求参数便于调试，非专业人员可将本文件删除",
+        " *   详细介绍请参考: https://bazhan.me/faq",
+        " *   "
+    ],
+    "directory": "pc-helper-mockuai-com-fojlnksn",
+    "options": {
+        "url": "https://pc-helper.mockuai.com/catalogs?app_type=30&channel_id=1&page_id=14&tag=1&catalog_id=114",
+        "index": "index.html",
+        "domain": "pc-helper.mockuai.com",
+        "ipaddress": "121.199.194.144",
+        "filenameGenerator": "byType",
+        "request": {
+            "headers": {
+                "accept": "text/html,*/*",
+                "accept-language": "zh-CN,zh;q=0.9",
+                "accept-encoding": "gzip",
+                "cache-control": "no-cache",
+                "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36",
+                "x-scraper-website": "https://bazhan.me/"
+            }
+        },
+        "response": {
+            "statusCode": 200,
+            "headers": {
+                "server": "openresty",
+                "date": "Thu, 14 Jan 2021 08:13:53 GMT",
+                "content-type": "text/html",
+                "content-length": "842",
+                "last-modified": "Mon, 16 Nov 2020 12:26:22 GMT",
+                "connection": "close",
+                "etag": "\"5fb26fee-34a\"",
+                "accept-ranges": "bytes"
+            }
+        }
+    },
+    "user": {
+        "isWhite": false
+    },
+    "formatter": [
+        "saveOriginal"
+    ],
+    "time": {
+        "start": 1610612028007,
+        "end": 1610612039463,
+        "spend": "11.456s"
+    }
+}
